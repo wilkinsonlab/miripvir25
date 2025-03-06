@@ -4,7 +4,7 @@ meta:
 
 tasks:
    
-  - name: scp
+  - name: copy
     source: scp.sh
     product:
       output_read1: "{{cwd}}/read1.fastq"
