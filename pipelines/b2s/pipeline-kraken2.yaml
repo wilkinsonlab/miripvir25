@@ -31,7 +31,7 @@ tasks:
     source: classify.sh
     params:
       kraken_db: "{{kraken_db}}"
-      threads: "{{kraken_threads}}"
+      kraken_threads: "{{kraken_threads}}"
     product:
       output_read1: "{{cwd}}/read1.qc.fastq"
       output_read2: "{{cwd}}/read2.qc.fastq"
