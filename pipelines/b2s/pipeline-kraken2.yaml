@@ -7,12 +7,14 @@ meta:
 tasks:
    
   - name: copy
-    source: copy.sh
+    source: scp.sh
     product:
       output_read1: "{{cwd}}/read1.fastq"
       output_read2: "{{cwd}}/read2.fastq"
     params:
-      path: "{{path}}"
+      remote_path: "{{remote_path}}"
+      user: "{{user}}"
+      url: "{{url}}"
       input_read1: "{{input_read1}}"
       input_read2: "{{input_read2}}"
 
