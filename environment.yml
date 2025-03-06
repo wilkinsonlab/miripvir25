@@ -1,0 +1,15 @@
+name: miripvir25
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - duckdb
+  - matplotlib
+  - numpy
+  - pandas
+  - conda-forge::ncbi-datasets-cli
+  - bioconda::blast
+  - bioconda::magicblast
+  - pysam
+  - biopython
+  - cutadapt

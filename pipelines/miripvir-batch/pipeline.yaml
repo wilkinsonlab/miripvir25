@@ -1,0 +1,19 @@
+tasks:
+  - source: tasks.run.create_environments
+    params:
+      change: "{{change}}"
+      source_env: "template.yaml"
+      source_data: "source.csv"
+      run_name: "{{run_name}}"
+      pipeline_location: "{{pipeline_location}}"
+      cwd: "{{cwd}}"
+    product: "{{cwd}}/run"
+  - source: tasks.run.create_sbatch
+    params:
+      run_name: "{{run_name}}"
+      processors: "{{proc}}"
+      memory: "{{memory}}"
+      time_limit: "{{time_limit}}"
+      partition: "{{partition}}"
+      pipeline_location: "{{pipeline_location}}"
+    product: "{{cwd}}/{{run_name}}.sbatch.job"
