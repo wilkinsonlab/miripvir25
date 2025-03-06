@@ -17,6 +17,7 @@ input=run
 library_name=$(awk -v i=$SLURM_ARRAY_TASK_ID '$1==i {print $2}' $input)
 cd $library_name
 srun ploomber build -e {{ pipeline_location }}
+rm *.fastq
 
 """
 
