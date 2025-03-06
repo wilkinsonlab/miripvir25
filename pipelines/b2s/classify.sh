@@ -1,2 +1,6 @@
-k2 classify --db {{ kraken_db }} --output {{ product['kraken_out'] }} --paired  --threads {{ kraken_threads }} \
-     {{ upstream['clean']['output_read1'] }} {{ upstream['clean']['output_read2'] }}
+k2 classify \
+     --paired  \
+     --db {{ kraken_db }} \
+     --output {{ product['kraken_out'] }} \
+     --threads {{ kraken_threads }} \
+     {{ upstream['quality']['output_read1'] }} {{ upstream['quality']['output_read2'] }}
