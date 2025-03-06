@@ -29,7 +29,7 @@ tasks:
 
   - name: classify
     source: classify.sh
-    param:
+    params:
       kraken_db: "{{kraken_db}}"
       threads: "{{kraken_threads}}"
     product:
