@@ -33,8 +33,7 @@ tasks:
       kraken_db: "{{kraken_db}}"
       kraken_threads: "{{kraken_threads}}"
     product:
-      output_read1: "{{cwd}}/read1.qc.fastq"
-      output_read2: "{{cwd}}/read2.qc.fastq"
+      kraken_out: "{{cwd}}/classification.csv"
 
   # - name: map
   #   source: map.sh
