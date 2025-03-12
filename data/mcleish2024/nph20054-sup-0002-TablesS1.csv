@@ -1,0 +1,79 @@
+﻿Date;Site_code;Collection_code;Times_sampled;Season;Location;Longitude;Latitude
+1/2/16;C1;C1F;1;autumn;Aranjuez;-3.593308;40.051302
+30/1/17;C1;C3F;2;autumn;Aranjuez;-3.593308;40.051302
+1/2/16;C2;C2F;1;autumn;Aranjuez;-3.599064;40.043193
+30/1/17;C2;C4F;2;autumn;Aranjuez;-3.599064;40.043193
+19/11/15;E1;E1F;1;autumn;Aranjuez;-3.500323;40.059138
+10/11/16;E1;E1F;2;autumn;Aranjuez;-3.500323;40.059138
+23/5/16;E1;E1P;1;spring;Aranjuez;-3.500323;40.059138
+3/5/17;E1;E1P;2;spring;Aranjuez;-3.500323;40.059138
+19/11/15;E2;E2F;1;autumn;San Martín de la Vega;-3.536191;40.234966
+10/11/16;E2;E2F;2;autumn;San Martín de la Vega;-3.536191;40.234966
+23/5/16;E2;E2P;1;spring;San Martín de la Vega;-3.536191;40.234966
+10/5/17;E2;E2P;2;spring;San Martín de la Vega;-3.536191;40.234966
+1/2/16;E3;E3F;1;autumn;Ambite;-3.196057;40.089637
+10/11/16;E3;E3F;2;autumn;Ambite;-3.196057;40.089637
+31/5/16;E3;E3P;1;spring;Ambite;-3.196057;40.089637
+3/5/17;E3;E3P;2;spring;Ambite;-3.196057;40.089637
+4/11/15;E4;E4F;1;autumn;Mondéjar;-3.131139;40.494167
+27/10/16;E4;E4F;2;autumn;Mondéjar;-3.131139;40.494167
+31/5/16;E4;E4P;1;spring;Mondéjar;-3.131139;40.494167
+3/5/17;E4;E4P;2;spring;Mondéjar;-3.131139;40.494167
+21/4/16;H1;H1P;1;spring;Villaconejos;-3.477574;40.04933
+19/4/17;H1;H4P;2;spring;Villaconejos;-3.477574;40.04933
+21/4/16;H2;H2P;1;spring;Villamanrique de Tajo;-3.214026;40.085899
+19/4/17;H2;H5P;2;spring;Villamanrique de Tajo;-3.214026;40.085899
+21/4/16;H3;H3P;1;spring;Tielmes;-3.253943;40.245852
+19/4/17;H3;H6P;2;spring;Tielmes;-3.253943;40.245852
+19/11/15;L1;L1F;1;summer;Aranjuez;-3.34522;40.03184
+10/11/16;L1;L1F;2;autumn;Aranjuez;-3.34522;40.03184
+31/3/16;L1;L1P;1;spring;Aranjuez;-3.34522;40.03184
+19/4/17;L1;L1P;2;spring;Aranjuez;-3.34522;40.03184
+16/7/15;L1;L1V;1;summer;Aranjuez;-3.34522;40.03184
+20/7/16;L1;L1V;2;summer;Aranjuez;-3.34522;40.03184
+19/11/15;L2;L2F;1;autumn;Villaconejos;-3.476462;40.048758
+10/11/16;L2;L2F;2;autumn;Villaconejos;-3.476462;40.048758
+31/3/16;L2;L2P;1;spring;Villaconejos;-3.476462;40.048758
+16/7/15;L2;L2V;1;summer;Villaconejos;-3.476462;40.048758
+20/7/16;L2;L2V;2;summer;Villaconejos;-3.476462;40.048758
+19/11/15;L3;L3F;1;autumn;Villamanrique de Tajo;-3.125794;40.050352
+10/11/16;L3;L3F;2;autumn;Villamanrique de Tajo;-3.125794;40.050352
+31/3/16;L3;L3P;1;spring;Villamanrique de Tajo;-3.125794;40.050352
+19/4/17;L3;L3P;2;spring;Villamanrique de Tajo;-3.125794;40.050352
+24/7/15;L3;L3V;1;summer;Villamanrique de Tajo;-3.125794;40.050352
+15/7/16;L3;L3V;2;summer;Villamanrique de Tajo;-3.125794;40.050352
+4/11/15;L4;L4F;1;autumn;Tielmes;-3.252617;40.245459
+27/10/16;L4;L4F;2;autumn;Tielmes;-3.252617;40.245459
+21/4/16;L4;L4P;1;spring;Tielmes;-3.252617;40.245459
+16/4/17;L4;L4P;2;spring;Tielmes;-3.252617;40.245459
+15/7/16;L4;L4V;2;summer;Tielmes;-3.252617;40.245459
+16/7/15;M1;M1V;1;summer;Aranjuez;-3.34522;40.03184
+20/7/16;M1;M5V;1;summer;Aranjuez;-3.34522;40.03184
+28/6/17;M1;M9V;1;summer;Aranjuez;-3.34522;40.03184
+16/7/15;M2;M2V;1;summer;Villaconejos;-3.50304;40.050578
+28/6/17;M3;M11V;1;summer;Villamanrique de Tajo;-3.125;40.0459
+24/7/15;M3;M3V;1;summer;Villamanrique de Tajo;-3.125;40.0459
+15/7/16;M3;M7V;1;summer;Villamanrique de Tajo;-3.125;40.0459
+28/6/17;M4;M12V;1;summer;Villamanrique de Tajo;-3.182801;40.032298
+24/7/15;M4;M4V;1;summer;Villamanrique de Tajo;-3.182801;40.032298
+15/7/16;M4;M8V;1;summer;Villamanrique de Tajo;-3.182801;40.032298
+8/9/15;Q1;Q1F;1;autumn;Aranjuez;-3.39183;39.59552
+12/9/16;Q1;Q1F;2;autumn;Aranjuez;-3.39183;39.59552
+23/5/16;Q1;Q1P;1;spring;Aranjuez;-3.39183;39.59552
+10/5/17;Q1;Q1P;2;spring;Aranjuez;-3.39183;39.59552
+21/9/15;Q2;Q2F;1;autumn;San Martín de la Vega;-3.530613;40.225155
+20/10/16;Q2;Q2F;2;autumn;San Martín de la Vega;-3.530613;40.225155
+23/5/16;Q2;Q2P;1;spring;San Martín de la Vega;-3.530613;40.225155
+10/5/17;Q2;Q2P;2;spring;San Martín de la Vega;-3.530613;40.225155
+21/9/15;Q3;Q3F;1;autumn;Ambite;-3.205903;40.320294
+27/10/16;Q3;Q3F;2;autumn;Ambite;-3.205903;40.320294
+31/5/16;Q3;Q3P;1;spring;Ambite;-3.205903;40.320294
+3/5/17;Q3;Q3P;2;spring;Ambite;-3.205903;40.320294
+21/9/15;Q4;Q4F;1;autumn;Mondéjar;-3.137145;40.345348
+27/10/16;Q4;Q4F;2;autumn;Mondéjar;-3.137145;40.345348
+31/5/16;Q4;Q4P;1;spring;Mondéjar;-3.137145;40.345348
+3/5/17;Q4;Q4P;2;spring;Mondéjar;-3.137145;40.345348
+16/7/15;Z1;Z1V;1;summer;Villaconejos;-3.476076;40.050052
+20/7/16;Z1;Z3V;1;summer;Villaconejos;-3.476076;40.050052
+24/7/15;Z2;Z2V;1;summer;Villamanrique de Tajo;-3.131;40.04472
+15/7/16;Z2;Z4V;1;summer;Villamanrique de Tajo;-3.131;40.04472

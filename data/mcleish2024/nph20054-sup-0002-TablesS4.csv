@@ -1,0 +1,179 @@
+OTU name;Family;NCBI_title;OTU_reference;Genome;%_ID_mean;%_ID_min;%_ID_max;BLAST_matches;NCBI_accession
+Alfamovirus 1;Bromoviridae;Alfalfa mosaic virus RNA 1;AMV1;(+)ssRNA;96.6;94.4;99.2;4;NC_001495
+Alfamovirus 1;Bromoviridae;Alfalfa mosaic virus RNA 2;AMV2;(+)ssRNA;94.1;94.1;94.1;2;NC_002024
+Alphaendornavirus 1;Endornaviridae;Cucumis melo endornavirus;CmEV;dsRNA;96.5;87.9;100;4174;NC_029064
+Alphaendornavirus 2;Endornaviridae;Bell pepper endornavirus;BPEV;dsRNA;100;100;100;2;NC_015781
+Alphaendornavirus 3;Endornaviridae;Hordeum vulgare endornavirus;HvEV;dsRNA;96.6;87.2;100;4002;NC_028949
+Alphanecrovirus 1;Tombusviridae;Olive latent virus 1;OLV1;(+)ssRNA;89.1;82.7;92.8;14;NC_001721
+Alphanecrovirus 2;Tombusviridae;Olive mild mosaic virus;OMMV;(+)ssRNA;91.8;90.3;94.7;6;NC_006939
+Alphanecrovirus 3;Tombusviridae;Potato necrosis virus;PNV;(+)ssRNA;88.1;85.6;90.7;4;NC_029900
+Alphapartitivirus 1;Partitiviridae;Arabidopsis halleri partitivirus 1;AhPV1;dsRNA;79.1;76.4;83.6;6;NC_030889
+Alphapartitivirus 2;Partitiviridae;Vicia cryptic virus RNA1;VCV_1;dsRNA;90.7;90.7;90.7;2;NC_007241
+Alphapartitivirus 2;Partitiviridae;Vicia cryptic virus RNA2;VCV_2;dsRNA;92.1;92.1;92.1;2;EU605883
+Anulavirus 1;Bromoviridae;Pelargonium zonate spot virus RNA 1;PZSV1;(+)ssRNA;93.4;78.6;98.4;132044;NC_003649
+Anulavirus 1;Bromoviridae;Pelargonium zonate spot virus RNA 2;PZSV2;(+)ssRNA;96.2;79.3;99.3;402640;NC_003650
+Anulavirus 1;Bromoviridae;Pelargonium zonate spot virus RNA 3;PZSV3;(+)ssRNA;97.6;76.6;100;1322982;NC_003651
+Aureusvirus 1;Tombusviridae;Cucumber leaf spot virus;CLSV;(+)ssRNA;88.4;84.7;92;120;NC_007816
+Aureusvirus 2;Tombusviridae;Pothos latent virus;PoLV;(+)ssRNA;91.2;82;96.9;320;NC_000939
+Aureusvirus 3;Tombusviridae;Yam spherical virus;YSV;(+)ssRNA;89.4;83.4;93.5;242;NC_022895
+Becurtovirus 1;Geminiviridae;Beet curly top Iran virus;BCTIV;ssDNA;87.3;81.1;98;5750;NC_010417
+Becurtovirus 2;Geminiviridae;Spinach curly top Arizona virus;SCTAV;ssDNA;84.2;79.3;90;284;NC_015051
+Begomovirus 3;Geminiviridae;Tomato leaf curl New Delhi virus;ToLCNDVB;ssDNA;99.4;98;100;22;KF749226
+Betacarmovirus 1;Tombusviridae;Cardamine chlorotic fleck virus;CCFV;(+)ssRNA;89;83.2;94.7;4;NC_001600
+Betapartitivirus 1;Partitiviridae;Red clover cryptic virus 2 RNA 1;RCCV_1;dsRNA;86.7;86.3;87.2;4;NC_021096
+Bromovirus 1;Bromoviridae;Brome mosaic virus RNA 1;BMV1;(+)ssRNA;98.8;98.4;99.2;2;NC_002026
+Bromovirus 1;Bromoviridae;Brome mosaic virus RNA 2;BMV2;(+)ssRNA;97.8;97.8;97.8;2;NC_002027
+Bromovirus 1;Bromoviridae;Brome mosaic virus RNA 3;BMV3;(+)ssRNA;93.7;93.3;94;2;NC_002028
+Carmovirus 1;Tombusviridae;Turnip crinkle virus;TCV;(+)ssRNA;99.4;96.7;100;586;NC_003821
+Caulimovirus 1;Caulimoviridae;Cauliflower mosaic virus;CaMV;dsDNA;89.2;87.4;91.3;6;NC_001497
+Caulimovirus 2;Caulimoviridae;Lamium leaf distortion associated virus;LLDAV;dsDNA;80.5;77.9;83.2;4;NC_010737
+Caulimovirus 3;Caulimoviridae;Soybean mild mottle pararetrovirus;SbMMoV;dsDNA;94.4;86;99.3;48;NC_018505
+Caulimovirus 4;Caulimoviridae;Atractylodes mild mottle virus;AMMV;dsDNA;88;88;88;2;NC_027924
+Crinivirus 1;Closteroviridae;Sweet potato chlorotic stunt virus RNA 1;SPCSV1;(+)ssRNA;82.7;81.2;84.3;8;NC_004123
+Crinivirus 1;Closteroviridae;Sweet potato chlorotic stunt virus RNA 2;SPCSV2;(+)ssRNA;82.6;80.7;84.1;92;NC_004124
+Cucumovirus 1;Bromoviridae;Cucumber mosaic virus RNA 1;CMV1;(+)ssRNA;99;85.3;100;592836;NC_002034
+Cucumovirus 1;Bromoviridae;Cucumber mosaic virus RNA 2;CMV2;(+)ssRNA;98.5;78.7;100;602904;NC_002035
+Cucumovirus 1;Bromoviridae;Cucumber mosaic virus RNA 3;CMV3;(+)ssRNA;99;76.3;100;1553414;NC_001440
+Cucumovirus 2;Bromoviridae;Gayfeather mild mottle virus RNA 1;GMMV1;(+)ssRNA;88.3;79.5;92.1;1918;NC_012134
+Cucumovirus 2;Bromoviridae;Gayfeather mild mottle virus RNA 3;GMMV3;(+)ssRNA;89.9;86.6;92;10;NC_012136
+Cucumovirus 3;Bromoviridae;Tomato aspermy virus RNA 1;TAV1;(+)ssRNA;98.1;86.5;100;2594;NC_003837
+Cucumovirus 3;Bromoviridae;Tomato aspermy virus RNA 2;TAV2;(+)ssRNA;99;88.7;100;1358;NC_003838
+Cucumovirus 3;Bromoviridae;Tomato aspermy virus RNA 3;TAV3;(+)ssRNA;98.8;89.3;100;1518;NC_003836
+Cucumovirus 4;Bromoviridae;Peanut stunt virus RNA 1;PSV1;(+)ssRNA;86.5;86.5;86.5;2;NC_002038
+Cucumovirus 4;Bromoviridae;Peanut stunt virus RNA 3;PSV3;(+)ssRNA;89.3;86.5;91.3;4;NC_002040
+Curtovirus 1;Geminiviridae;Beet curly top virus;BCTV;ssDNA;79;77.6;80.1;28;KT583741
+Curtovirus 2;Geminiviridae;Beet mild curly top virus;BMCTV;ssDNA;81.8;80.1;83.2;452;U56975
+Curtovirus 3;Geminiviridae;Beet severe curly top virus;BSCTV;ssDNA;82.1;80.1;84.8;700;U02311
+Curtovirus 4;Geminiviridae;Pepper yellow dwarf virus;PeYDV;ssDNA;81.4;76.3;84.2;1098;NC_034629
+Curtovirus 5;Geminiviridae;Spinach severe curly top virus;SpSCTV;ssDNA;83.8;81.3;84.7;938;NC_014631
+Cytorhabdovirus 1;Rhabdoviridae;Barley yellow striate mosaic virus;BYSMV;(-)ssRNA;95.7;93.9;97.3;8;NC_028244
+Deltapartitivirus 1;Partitiviridae;Raphanus sativus cryptic virus 1 dsRNA 2;RsCV1_2;dsRNA;87;86.6;87.4;2;NC_008190
+Deltapartitivirus 4;Partitiviridae;Raphanus sativus cryptic virus 2 segment 1;RsCV2_1;dsRNA;88.7;87.3;89.6;10;NC_010343
+Deltapartitivirus 5;Partitiviridae;Raphanus sativus cryptic virus 3 segment 1;RsCV3_1;dsRNA;88.9;80.3;92.8;20;NC_011705
+Deltapartitivirus 2;Partitiviridae;Fragaria chiloensis cryptic virus RNA 1;FClCV_1;dsRNA;82.4;81.6;83.2;2;NC_009519
+Deltapartitivirus 3;Partitiviridae;Pepper cryptic virus 2;PCV2;dsRNA;99;98.7;99.3;2;KR676354
+Emaravirus 1;Fimoviridae;Fig mosaic virus RNA 1;FMV1;(-)ssRNA;82.2;78.2;87.3;10;NC_029562
+Emaravirus 2;Fimoviridae;Rose rosette virus RNA 1;RRV1;(-)ssRNA;78.6;78.6;78.6;2;NC_015298
+Enamovirus 3;Luteoviridae;Alfalfa enamovirus 1;AEV1;(+)ssRNA;86.7;84.9;88.1;12;NC_029993
+Enamovirus 4;Luteoviridae;Pea enation mosaic virus 1;PEMV1;(+)ssRNA;83.4;83;84.2;4;NC_003629
+Ilarvirus 1;Bromoviridae;Parietaria mottle virus RNA 1;PMoV1;(+)ssRNA;87.7;77.1;93.3;6616;NC_005848
+Ilarvirus 1;Bromoviridae;Parietaria mottle virus RNA 2;PMoV2;(+)ssRNA;87.5;79.5;92.4;4262;NC_005849
+Ilarvirus 1;Bromoviridae;Parietaria mottle virus RNA 3;PMoV3;(+)ssRNA;87.7;79.3;93.6;22464;NC_005854
+Ilarvirus 2;Bromoviridae;Strawberry necrotic shock virus RNA 2;SNSV2;(+)ssRNA;86.7;85.3;88.4;246;NC_008707
+Ilarvirus 3;Bromoviridae;Ageratum latent virus RNA 1;AGLV1;(+)ssRNA;83.7;80.8;85.7;14;NC_022127
+Ilarvirus 4;Bromoviridae;Blackberry chlorotic ringspot virus RNA 1;BCRV1;(+)ssRNA;81;79.7;83.5;182;NC_011553
+Ilarvirus 5;Bromoviridae;Prune dwarf virus RNA 1;PDV1;(+)ssRNA;84.2;80.8;88.1;38;NC_008039
+Ilarvirus 5;Bromoviridae;Prune dwarf virus RNA 2;PDV2;(+)ssRNA;83.6;82.4;87.5;8;NC_008037
+Ilarvirus 6;Bromoviridae;Prunus necrotic ringspot virus RNA 3;PNRSV3;(+)ssRNA;95.1;90.5;98.7;8;NC_004364
+Ilarvirus 7;Bromoviridae;Tobacco streak virus RNA 1;TSV1;(+)ssRNA;82.4;78.9;85.8;276;NC_003844
+Ilarvirus 7;Bromoviridae;Tobacco streak virus RNA 2;TSV2;(+)ssRNA;80.5;76.5;82;18;NC_003842
+Luteovirus 1;Luteoviridae;Barley yellow dwarf virus - GAV;BYDV_GAV;(+)ssRNA;93.2;80.8;99.2;46864;NC_004666
+Luteovirus 2;Luteoviridae;Barley yellow dwarf virus - MAV;BYDV_MAV;(+)ssRNA;95.5;80.8;100;42058;NC_003680
+Luteovirus 3;Luteoviridae;Barley yellow dwarf virus - PAS;BYDV_PAS;(+)ssRNA;95.7;77.5;100;30792;NC_002160
+Luteovirus 4;Luteoviridae;Barley yellow dwarf virus - PAV;BYDV_PAV;(+)ssRNA;95.6;80.6;100;131212;NC_004750
+Luteovirus 5;Luteoviridae;Soybean dwarf virus;SbDV;(+)ssRNA;82;80.8;82.6;16;NC_003056
+Luteovirus 6;Luteoviridae;Barley yellow dwarf virus - GPV;BYDV_GPV;(+)ssRNA;91.8;90.4;92.8;8;NC_039035
+Luteovirus 7;Luteoviridae;Barley yellow dwarf virus Ker-II;BYDV_KerII;(+)ssRNA;85.9;80;88.1;142;NC_021481
+Mastrevirus 1;Geminiviridae;Wheat dwarf virus;WDV;ssDNA;88.8;88.8;88.8;2;HF968633
+Necrovirus 1;Tombusviridae;Beet black scorch virus;BBSV;(+)ssRNA;95.5;91.3;98.6;86;NC_004452
+Necrovirus 2;Tombusviridae;Tobacco necrosis virus A;TNVA;(+)ssRNA;96.7;89.3;99.3;242;NC_001777
+Necrovirus 3;Tombusviridae;Tobacco necrosis virus D;TNVD;(+)ssRNA;97.7;97.4;98;2;NC_003487
+Nucleorhabdovirus 1;Rhabdoviridae;Datura yellow vein virus;DYVV;(-)ssRNA;78.5;78.5;78.5;6;NC_028231
+Nucleorhabdovirus 2;Rhabdoviridae;Eggplant mottled dwarf virus;EMDV;(-)ssRNA;89.8;80;95.2;5376;NC_025389
+Panicovirus 1;Tombusviridae;Bermuda grass latent virus;BGLV;(+)ssRNA;94.7;94;95.4;2;NC_032405
+Polerovirus 1;Luteoviridae;African eggplant yellowing virus;AEYV;(+)ssRNA;82.1;79.4;89.6;34;NC_034207
+Polerovirus 2;Luteoviridae;Barley virus G;BaVG;(+)ssRNA;85.7;83.2;97.6;20;NC_029906
+Polerovirus 3;Luteoviridae;Beet chlorosis virus;BChV;(+)ssRNA;93.5;77.3;98.4;19156;NC_002766
+Polerovirus 4;Luteoviridae;Beet mild yellowing virus;BMYV;(+)ssRNA;94;80.8;99.3;24224;NC_003491
+Polerovirus 5;Luteoviridae;Brassica yellows virus isolate;BrYV_ABJ;(+)ssRNA;94.8;76.3;100;41622;NC_016038
+Polerovirus 6;Luteoviridae;Beet western yellows virus;BWYV;(+)ssRNA;94.8;77.6;100;57752;NC_004756
+Polerovirus 7;Luteoviridae;Cucurbit aphid-borne yellows virus;CABYV;(+)ssRNA;94.7;75;100;720;NC_003688
+Polerovirus 8;Luteoviridae;Cotton leafroll dwarf virus;CLRDV;(+)ssRNA;85.5;77.6;89.8;148;NC_014545
+Polerovirus 9;Luteoviridae;Chickpea chlorotic stunt virus;CpCSV;(+)ssRNA;87.2;80.9;89.6;138;NC_008249
+Polerovirus 10;Luteoviridae;Carrot red leaf virus;CtRLV;(+)ssRNA;97.7;96.2;99.3;12;NC_006265
+Polerovirus 11;Luteoviridae;Cereal yellow dwarf virus - RPS;CYDV_RPS;(+)ssRNA;92.6;78.5;97.6;1756;NC_002198
+Polerovirus 12;Luteoviridae;Cereal yellow dwarf virus - RPV;CYDV_RPV;(+)ssRNA;94.5;79.5;98.4;1014;NC_004751
+Polerovirus 13;Luteoviridae;Ixeridium yellow mottle virus 1;IYMoV1;(+)ssRNA;89;77.6;94;354;NC_029691
+Polerovirus 14;Luteoviridae;Ixeridium yellow mottle virus 2;IYMoV2;(+)ssRNA;88.7;78.7;94.5;2956;NC_034243
+Polerovirus 15;Luteoviridae;Melon aphid-borne yellows virus;MABYV;(+)ssRNA;87;77.7;96;692;NC_010809
+Polerovirus 16;Luteoviridae;Maize yellow dwarf virus - RMV;MYDV;(+)ssRNA;85.9;84.8;86.9;4;NC_021484
+Polerovirus 17;Luteoviridae;Maize yellow dwarf virus - RMV2;MYDV2;(+)ssRNA;81.3;79.7;83.7;48;NC_029990
+Polerovirus 18;Luteoviridae;Pepo aphid-borne yellows virus;PABYV;(+)ssRNA;87.9;81.8;94;160;NC_030225
+Polerovirus 19;Luteoviridae;Phasey bean mild yellows virus;PBMYV;(+)ssRNA;83.7;76.1;87.5;20;NC_028793
+Polerovirus 20;Luteoviridae;Potato leafroll virus;PLRV;(+)ssRNA;85.1;82;86.6;84;NC_001747
+Polerovirus 21;Luteoviridae;Pepper vein yellows virus;PVYV;(+)ssRNA;84.3;75;89.6;48;NC_015050
+Polerovirus 22;Luteoviridae;Suakwa aphid-borne yellows virus;SABYV;(+)ssRNA;87.3;81.4;92.8;66;NC_018571
+Polerovirus 23;Luteoviridae;Sauropus yellowing virus;SaYV;(+)ssRNA;86.1;86;86.2;6;NC_025837
+Polerovirus 24;Luteoviridae;Sugarcane yellow leaf virus;ScYLV;(+)ssRNA;87;76.3;93.2;184;NC_000874
+Polerovirus 25;Luteoviridae;Turnip yellows virus;TuYV;(+)ssRNA;95;76.8;100;58226;NC_003743
+Polerovirus 26;Luteoviridae;Tobacco vein distorting virus;TVDV;(+)ssRNA;84.2;81.2;89;32;NC_010732
+Polerovirus 27;Luteoviridae;Wheat leaf yellowing-associated virus;WLYaV;(+)ssRNA;89.6;86;92;28;NC_035451
+Polerovirus 28;Luteoviridae;Wheat yellow dwarf virus - GPV;WYDV_GPV;(+)ssRNA;89.6;77.6;92.8;50;NC_012931
+Polerovirus 29;Luteoviridae;Cowpea polerovirus 1;CP1;(+)ssRNA;89;81.6;92;94;NC_034246
+Polerovirus 30;Luteoviridae;Groundnut rosette assistor virus;GRAV;(+)ssRNA;84.9;83.3;86.5;2;NC_038509
+Polerovirus 31;Luteoviridae;White clover mottle virus;WClMV;(+)ssRNA;85.8;80.1;88.4;52;NC_031747
+Potyvirus 1;Potyviridae;Asparagus virus 1;AV1;(+)ssRNA;79.8;78.7;80.9;8;NC_025821
+Potyvirus 10;Potyviridae;Plum pox virus;PPV;(+)ssRNA;98.7;94.8;100;54;NC_001445
+Potyvirus 11;Potyviridae;Potato virus Y;PVY;(+)ssRNA;96.3;96;96.7;2;NC_001616
+Potyvirus 12;Potyviridae;Soybean mosaic virus;SbMV;(+)ssRNA;88.3;78.5;93.1;4024;NC_002634
+Potyvirus 13;Potyviridae;Scallion mosaic virus;ScaMV;(+)ssRNA;85.9;84.1;88.1;20;NC_003399
+Potyvirus 14;Potyviridae;Sugarcane mosaic virus;SCMV;(+)ssRNA;85.5;78.5;89.1;230;NC_003398
+Potyvirus 15;Potyviridae;Sorghum mosaic virus;SrMV;(+)ssRNA;85.5;77.1;90.1;470;NC_004035
+Potyvirus 16;Potyviridae;Telosma mosaic virus;TelMV;(+)ssRNA;80.3;79.4;81.5;28;NC_009742
+Potyvirus 17;Potyviridae;Tomato necrotic stunt virus;TNSV;(+)ssRNA;78.6;78;79;4;NC_017824
+Potyvirus 18;Potyviridae;Turnip mosaic virus;TuMV;(+)ssRNA;95.8;79.9;100;3514;NC_002509
+Potyvirus 19;Potyviridae;Watermelon mosaic virus;WMV;(+)ssRNA;95.3;81.5;100;570274;NC_006262
+Potyvirus 2;Potyviridae;Bean common mosaic virus;BCMV;(+)ssRNA;81.6;78.9;86.1;130;NC_003397
+Potyvirus 20;Potyviridae;Yam bean mosaic virus;YBMV;(+)ssRNA;79.1;76.8;83.1;8;NC_016441
+Potyvirus 21;Potyviridae;Yam mosaic virus;YMV;(+)ssRNA;82.5;79.1;83.5;54;NC_004752
+Potyvirus 22;Potyviridae;Zucchini yellow mosaic virus;ZYMV;(+)ssRNA;88.8;78.1;94.7;6;NC_003224
+Potyvirus 23;Potyviridae;Arracacha mottle virus;AMoV;(+)ssRNA;78;78;78;2;NC_018176
+Potyvirus 24;Potyviridae;Passion fruit woodiness virus;PWV;(+)ssRNA;78.9;78.7;79.1;2;NC_014790
+Potyvirus 3;Potyviridae;Cowpea aphid-borne mosaic virus;CABMV;(+)ssRNA;82.2;76.3;85.4;306;NC_004013
+Potyvirus 4;Potyviridae;Calla lily latent virus;CLLV;(+)ssRNA;90.2;81.3;93.1;1768;NC_021196
+Potyvirus 5;Potyviridae;Fritillary virus Y;FVY;(+)ssRNA;80.8;80.3;81.8;22;NC_010954
+Potyvirus 6;Potyviridae;Iranian johnsongrass mosaic virus;IJGMV;(+)ssRNA;79.7;77;90.7;128;NC_018833
+Potyvirus 7;Potyviridae;Johnsongrass mosaic virus;JGMV;(+)ssRNA;82.9;81.6;84.3;6;NC_003606
+Potyvirus 8;Potyviridae;Lettuce mosaic virus;LMV;(+)ssRNA;77.2;75.6;78;8;NC_003605
+Potyvirus 9;Potyviridae;Maize dwarf mosaic virus;MDMV;(+)ssRNA;92.1;81.1;98.7;27734;NC_003377
+Satellite;Satellite;Cucumber mosaic virus satellite RNA;CMV_satRNA;satRNA;99.3;97.6;100;26;NC_002602
+Sobemovirus 1;Solemoviridae;Rubus chlorotic mottle virus;RuCMV;(+)ssRNA;93.7;76.8;100;1094862;NC_011187
+Sobemovirus 2;Solemoviridae;Turnip rosette virus;TRoV;(+)ssRNA;91.2;91.2;91.2;2;NC_004553
+Solendovirus 1;Caulimoviridae;Tobacco vein clearing virus;TVCV;dsDNA;87.7;79.3;94;104;NC_003378
+Tobamovirus 1;Virgaviridae;Bell pepper mottle virus;BPeMV;(+)ssRNA;87.5;87.5;87.5;2;NC_009642
+Tobamovirus 10;Virgaviridae;Tropical soda apple mosaic virus;TSAMV;(+)ssRNA;87.8;86;91;6;NC_030229
+Tobamovirus 11;Virgaviridae;Wasabi mottle virus;WMoV;(+)ssRNA;91.4;85.5;94.9;110;NC_003355
+Tobamovirus 12;Virgaviridae;Youcai mosaic virus;YoMV;(+)ssRNA;99.8;91.2;100;6388;NC_004422
+Tobamovirus 13;Virgaviridae;Obuda pepper virus;ObPV;(+)ssRNA;92.5;87.2;97.6;40;NC_003852
+Tobamovirus 14;Virgaviridae;Paprika mild mottle virus;PaMMV;(+)ssRNA;90.4;89.6;91.2;2;NC_004106
+Tobamovirus 15;Virgaviridae;Ribgrass mosaic virus;RMV;(+)ssRNA;86.4;80.3;93.4;14;NC_002792
+Tobamovirus 16;Virgaviridae;Turnip vein-clearing virus;TuVCV;(+)ssRNA;89.3;84.1;93.7;62;NC_001873
+Tobamovirus 2;Virgaviridae;Cucumber green mottle mosaic virus;CGMMV;(+)ssRNA;98.9;98.4;100;4;NC_001801
+Tobamovirus 3;Virgaviridae;Pepper mild mottle virus;PMMoV;(+)ssRNA;99.4;91.3;100;470;NC_003630
+Tobamovirus 4;Virgaviridae;Rehmannia mosaic virus;RheMV;(+)ssRNA;90.6;84.8;94;52;NC_009041
+Tobamovirus 5;Virgaviridae;Tomato brown rugose fruit virus;TBRFV;(+)ssRNA;88.5;83.8;92.3;28;NC_028478
+Tobamovirus 6;Virgaviridae;Tobacco mild green mosaic virus;TMGMV;(+)ssRNA;96.9;87.3;100;8824;NC_001556
+Tobamovirus 7;Virgaviridae;Tobacco mosaic virus;TMV;(+)ssRNA;99.3;83.2;100;2232;NC_001367
+Tobamovirus 8;Virgaviridae;Tomato mottle mosaic virus;ToMMV;(+)ssRNA;87.8;84;91.3;14;NC_022230
+Tobamovirus 9;Virgaviridae;Tomato mosaic virus;ToMV;(+)ssRNA;97.1;82.9;100;138;NC_002692
+Tombusvirus 1;Tombusviridae;Artichoke mottled crinkle virus;AMCV;(+)ssRNA;95.6;88;99.2;44;NC_001339
+Tombusvirus 10;Tombusviridae;Pelargonium leaf curl virus;PLCV;(+)ssRNA;95.3;86.4;98.7;78;NC_030452
+Tombusvirus 11;Tombusviridae;Pelargonium necrotic spot virus;PNSV;(+)ssRNA;94.6;90.4;96.8;10;NC_005285
+Tombusvirus 2;Tombusviridae;Carnation Italian ringspot virus;CIRV;(+)ssRNA;95.4;82;99.2;64;NC_003500
+Tombusvirus 3;Tombusviridae;Cucumber necrosis virus;CNV;(+)ssRNA;88;83.2;90.4;4;NC_001469
+Tombusvirus 4;Tombusviridae;Cymbidium ringspot virus;CymRSV;(+)ssRNA;91.8;86.5;95.2;14;NC_003532
+Tombusvirus 5;Tombusviridae;Eggplant mottled crinkle virus;EMCV;(+)ssRNA;89.8;84.8;92.8;6;NC_023339
+Tombusvirus 6;Tombusviridae;Grapevine Algerian latent virus;GALV;(+)ssRNA;93;84.1;97.6;46;NC_011535
+Tombusvirus 7;Tombusviridae;Havel river virus;HRV;(+)ssRNA;88;84.1;91.2;4;NC_038690
+Tombusvirus 8;Tombusviridae;Moroccan pepper virus;MPV;(+)ssRNA;96;86.4;100;86;NC_020073
+Tombusvirus 9;Tombusviridae;Petunia asteroid mosaic virus;PAMV;(+)ssRNA;91.8;88.8;95.2;14;NC_038692
+Tombusvirus12;Tombusviridae;Tomato bushy stunt virus;TBSV;(+)ssRNA;96.8;88.8;100;244;NC_001554
+Tritimovirus 1;Potyviridae;Wheat streak mosaic virus;WSMV;(+)ssRNA;95;93.9;96.2;4;NC_001886
+Tymovirus 1;Tymoviridae;Dulcamara mottle virus;DuMV;(+)ssRNA;92.2;90.4;92.8;10;NC_007609
+Tymovirus 2;Tymoviridae;Turnip yellow mosaic virus;TYMV;(+)ssRNA;99.2;99.2;99.2;2;NC_004063
+Comovirus;Secoviridae;Arabidopsis latent virus-1 RNA1;ALaV1;(+)ssRNA;99.5;97.3;100;52;MH899120
+Comovirus;Secoviridae;Arabidopsis latent virus-1 RNA2;ALaV2;(+)ssRNA;97.6;94;100;30;MH899121
+Varicosavirus 1;Rhabdoviridae;Lettuce big-vein associated virus RNA 1;LBVaV1;(-)ssRNA;95.3;93.3;97.3;12;NC_011558
+Varicosavirus 1;Rhabdoviridae;Lettuce big-vein associated virus RNA 2;LBVaV2;(-)ssRNA;94.9;90.6;98;32;NC_011568
+Varicosavirus 2;Rhabdoviridae;Lettuce yellow mottle virus;LYMoV;(-)ssRNA;96.2;85.3;100;2702;NC_011532
+;;;;;;;;;
