@@ -1,0 +1,8 @@
+tasks:
+
+  - name: accessions
+    source: tasks.run.obtain_accessions_taxid
+    params:
+      reference_file: "{{input}}"
+    product: 
+      genome_accessions: "{{cwd}}/{{name}}.accessions.csv"

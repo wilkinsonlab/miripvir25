@@ -6,6 +6,7 @@ Each field contains an example and the the following information.
 - Host:"Galium verum", scientific name of the host organism
 - Host_taxid:"462873", taxonomy id for the host organism
 - OTU:"AEV1", OTU identifier
+- OTU_taxid:"1770265", taxonomy idd for the otu (if found)
 - NCBI_accession:"NC_029993", NCBI sequence entry identifier for the OTU
 - Habitat:"Oak", Habitat
 - Habitat_labels:"11 - forest or woodland", Code (for ontology use)
