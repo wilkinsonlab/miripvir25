@@ -1,0 +1,45 @@
+meta:
+  source_loader:
+    path: "{{pipeline_path}}"
+
+tasks:
+
+  - name: copy
+    source: scripts/scp.sh
+    product: 
+      output_read1: "{{cwd}}/read1.fastq"
+      output_read2: "{{cwd}}/read2.fastq"
+    params:
+      remote_path: "{{remote_path}}"
+      user: "{{user}}"
+      url: "{{url}}"
+      input_read1: "{{input_read1}}"
+      input_read2: "{{input_read2}}"
+
+  - source: quality
+    source: scripts/quality.sh
+    product: 
+      output_read1: "{{cwd}}/read1.qc.fastq"
+      output_read2: "{{cwd}}/read2.qc.fastq"
+    params: 
+      primers: "{{primers}}"
+      quality_threshold: "{{quality_threshold}}"
+
+  - source: flash
+    source: scripts/flash.sh
+    product: "{{cwd}}/unpaired.fastq"
+    params: 
+      threads: "{{threads}}"
+
+  - source: mmseqs-create-db
+    source: scripts/mmseqs-create-db.sh
+    product: "{{cwd}}/reads"
+
+  - source: mmseqs-map-taxonomy
+    source: scripts/mmseqs-map-taxonomy.sh
+    product: 
+      tsv: "{{cwd}}/{{library_name}}.taxonomy.tsv"
+      html: "{{cwd}}/{{library_name}}.taxonomy.html"
+    params: 
+      ref_db_path: "{{ref_db_path}}"
+      name: "{{library_name}}"
