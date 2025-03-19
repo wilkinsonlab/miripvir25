@@ -2,4 +2,4 @@
 echo {{upstream['mmseqs-create-db']['log']}}
 mmseqs taxonomy {{upstream['mmseqs-create-db']['db']}} {{ref_db_path}} {{name}} tmp -s 2 > {{product['log_search']}}
 mmseqs createtsv {{upstream['mmseqs-create-db']['db']}} {{name}} {{product['tsv']}} > {{product['log_tsv']}}
-mmseqs taxonomyreport {{upstream['mmseqs-create-db']['db']}} {{name}} {{product['html']}} --report-mode 1  > {{product['log_report']}}
+mmseqs taxonomyreport {{ref_db_path}} {{name}} {{product['html']}} --report-mode 1  > {{product['log_report']}}
