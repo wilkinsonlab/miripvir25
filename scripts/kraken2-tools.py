@@ -22,29 +22,29 @@ def obtain_scientific_name(taxonid):
 
 
 @click.command()
-@click.option("-o", "--output-hits", default=None)
-@click.option("-c", "--output-counts", default=None)
+@click.option("-o", "--output", default=None)
+@click.option("-l", "--library", default="none")
 @click.argument("FILE")
-def summarize(file, output_hits, output_counts):
-    
-    u = dict()
+def summarize(file, output, library):
+    """
+
+    Maps the Kraken2 output to a list of taxon - number of sequences, 
+    which should be much easier to handle for later analysis than the mere
+    kraken2 output. 
+
+    """
     df = pd.read_csv(file, sep="\t", header=None, index_col=None, names=['is_classified', 'seq_id',  'taxonid', '_1', '_2'])
     len_raw_df = len(df)
     df = df.query('is_classified == "C"').copy()
     len_classified_df = len(df)
     df = df.value_counts(['taxonid']).reset_index()
-    u['classification-ratio'] = len_classified_df / len_raw_df
+    df['classification-ratio'] = len_classified_df / len_raw_df
     df['scientific_name'] = df['taxonid'].apply(obtain_scientific_name)
-    df['level_0'] = df['taxonid'].apply(lambda x: obtain_level(x, 0))
-    df['level_1'] = df['taxonid'].apply(lambda x: obtain_level(x, 1))
-    df['level_2'] = df['taxonid'].apply(lambda x: obtain_level(x, 2))
-    df['level_3'] = df['taxonid'].apply(lambda x: obtain_level(x, 3))
-    if output_hits is not None:
-        df.value_counts(subset=['level_0', 'level_1', 'level_2', 'level_3']).reset_index().to_csv(output_hits, index=None)
-    if output_counts is not None:
-        df[
-            ['level_0', 'level_1', 'level_2', 'level_3', 'count']
-        ].groupby(['level_0', 'level_1', 'level_2', 'level_3'], as_index=False).sum().to_csv(output_counts, index=None)
+    df['library'] = library
+    if output is not None:
+        df[['library', 'taxonid', 'scientific_name', 'count']].to_csv(output, index=None)
+    else:
+        print(df[['library', 'taxonid', 'scientific_name', 'count']].to_csv(sep=",", index=None), end="")
 
 if __name__ == "__main__":
     summarize()
