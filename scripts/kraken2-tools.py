@@ -44,7 +44,7 @@ def summarize(file, output, library):
     if output is not None:
         df[['library', 'taxonid', 'scientific_name', 'count']].to_csv(output, index=None)
     else:
-        print(df[['library', 'taxonid', 'scientific_name', 'count']].to_csv(sep=",", index=None), end="")
+        print(df[['library', 'classification-ratio', 'taxonid', 'scientific_name', 'count']].to_csv(sep=",", index=None), end="")
 
 if __name__ == "__main__":
     summarize()
