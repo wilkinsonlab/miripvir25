@@ -42,7 +42,7 @@ def summarize(file, output, library):
     df['scientific_name'] = df['taxonid'].apply(obtain_scientific_name)
     df['library'] = library
     if output is not None:
-        df[['library', 'taxonid', 'scientific_name', 'count']].to_csv(output, index=None)
+        df[['library', 'classification-ratio', 'taxonid', 'scientific_name', 'count']].to_csv(output, index=None)
     else:
         print(df[['library', 'classification-ratio', 'taxonid', 'scientific_name', 'count']].to_csv(sep=",", index=None), end="")
 
