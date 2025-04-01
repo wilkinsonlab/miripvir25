@@ -5,12 +5,14 @@ meta:
 tasks:
    
   - name: copy
-    source: copy.sh
+    source: scp.sh
     product:
       output_read1: "{{cwd}}/read1.fastq"
       output_read2: "{{cwd}}/read2.fastq"
     params:
-      path: "{{path}}"
+      remote_path: "{{remote_path}}"
+      user: "{{user}}"
+      url: "{{url}}"
       input_read1: "{{input_read1}}"
       input_read2: "{{input_read2}}"
 
@@ -19,30 +21,32 @@ tasks:
     params:
       primers: "{{primers}}"
       quality_threshold: "{{quality_threshold}}"
-      threads: 10
+      threads: "{{threads}}"
     product:
       output_read1: "{{cwd}}/read1.qc.fastq"
       output_read2: "{{cwd}}/read2.qc.fastq"
 
-  - name: map
-    source: map.sh
+  - name: blast-map
+    source: blast-map.sh
     params:
       blastdb: "{{blastdb}}"
-      threads: 10
+      threads: "{{threads}}"
+      evalue: "{{evalue}}"
     product:
-      hits: "{{cwd}}/blast-hits.{{library_name}}.tab"
+      output_read1: "{{cwd}}/blast-hits.{{library_name}}1.tab"
+      output_read2: "{{cwd}}/blast-hits.{{library_name}}2.tab"
       
   #     # rdf: blast-metadata.{{library_name}}.rdf
 
-  - name: filter
-    source: filter.py
+  - name: blast-filter
+    source: run.filter_blast
     product: 
-      species_hits: "{{cwd}}/species-hits.{{library_name}}.json"
+      species_hits: "{{cwd}}/species-hits.{{library_name}}.csv"
       nb: "{{cwd}}/species-hits.{{library_name}}.ipynb"
       # species_hits_rdf: species-hits.{{library_name}}.rdf
       # filtered_reads: blast-filtered-reads.{{library_name}}.tab
     params:
       library_name: "{{library_name}}"
-      identity_threshold: 100
-      length_threshold: 125
-      species_reference: "{{species_reference}}"
+      query_coverage: "{{query_coverage}}"
+      length_threshold: "{{length_threshold}}"
+      lookup_table: "{{lookup_table}}"

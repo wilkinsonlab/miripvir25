@@ -37,14 +37,15 @@ hits = read_hits_tab(upstream['map']['hits'], library_name)
 ##
 hits_taxid = pd.merge(
     hits, genome_index, 
-    right_on='id', left_on='ref_id'
+    right_on='sequence_id', left_on='ref_id'
 )
 hits_taxid = hits_taxid.query(f'identity == {identity_threshold}')
 hits_taxid['aln_len'] = hits_taxid['qend'] - hits_taxid['qstart']
 hits_taxid = hits_taxid.query(f'aln_len > {length_threshold}')
+hits_taxid = hits_taxid.query(f'difaln < 2')
 hits_taxid
 ##
-hits_taxid_dd = hits_taxid.drop_duplicates(subset=['query_id', 'ref_id'], keep='first')
+hits_taxid_dd = hits_taxid.drop_duplicates(subset=['query_id', 'sequence_id'], keep='first')
 hits_taxid_dd
 ##
 sns.displot(hits_taxid_dd, x='aln_len', bins=20)
@@ -63,12 +64,12 @@ hits_taxid_dd_unambiguous_ids
 selected_hits = hits_taxid_dd_unambiguous_ids.query('count < 2')['query_id'].to_list()
 ##
 species_hits = pd.merge(
-    hits[hits['query_id'].isin(selected_hits)], genome_index[['id', 'species_name', 'taxid']], 
-    right_on='id', left_on='ref_id'
-).value_counts(subset=['species_name', 'taxid']).reset_index()
+    hits[hits['query_id'].isin(selected_hits)], genome_index[['sequence_id', 'organism', 'taxid']], 
+    right_on='sequence_id', left_on='ref_id'
+).value_counts(subset=['organism', 'taxid']).reset_index()
 ##
 species_hits['log_count'] = species_hits['count'].apply(np.log10)
-g = sns.catplot(y='species_name', x='log_count', data=species_hits, aspect=0.4, height=12.0)
+g = sns.catplot(y='organism', x='log_count', data=species_hits, aspect=0.4, height=12.0)
 ##
 species_hits.to_json(
     product['species_hits'],

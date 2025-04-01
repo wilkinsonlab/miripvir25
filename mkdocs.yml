@@ -1,0 +1,5 @@
+site_name: Miripvir
+theme:
+  name: material
+plugins:
+  - mkdocstrings

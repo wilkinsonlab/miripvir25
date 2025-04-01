@@ -1,0 +1,8 @@
+results/2025-03-06-kraken2-test/
+results/b2s-pv064-2025-03-05/
+results/b2s-scp-pv064-2025-03-06/
+results/marco-mapping-2025-02-25/
+results/
+data/
+*.metadata
+test/*

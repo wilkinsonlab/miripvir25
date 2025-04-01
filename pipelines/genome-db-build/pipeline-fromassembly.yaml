@@ -6,3 +6,28 @@ tasks:
       reference_file: "{{input}}"
     product: 
       genome_accessions: "{{cwd}}/{{name}}.accessions.csv"
+
+  - name: download
+    source: scripts/download-genomes.sh
+    params:
+      path: "{{cwd}}"
+    product:
+      log: "{{cwd}}/.log"
+      failures: "{{cwd}}/.failures"
+      success: "{{cwd}}/.success"
+
+  - name: create-db
+    source: scripts/create-db.sh
+    params:
+      path: "{{cwd}}"
+      dbname: "{{name}}"
+      dbnamepath: "{{cwd}}/{{name}}"
+    product: 
+      index: "{{cwd}}/{{name}}.index.csv"
+      
+  - name: look_up
+    source: tasks.run.create_lookup_table
+    params:
+      path: "{{cwd}}"
+    product:
+      sequence_index: "{{cwd}}/{{name}}.reference.json"
