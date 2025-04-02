@@ -16,7 +16,7 @@ def read_paired_end_files(file_forward: str, file_backward: str)->BlastPairedEnd
     read1['file'] = 'forward'
     read2['file'] = 'backward'
     bper = BlastPairedEndReads(
-        reads_1=read1, reads_2=read2, source_1=file_forward, source_2=file_backward
+        reads_1=read1, reads_2=read2, source_1=str(file_forward), source_2=str(file_backward)
     )
     return bper
 
@@ -32,6 +32,6 @@ def read_blastdb_reference(reference: str)-> LookUpTable:
 
     """
     return LookUpTable(
-        source=reference,
+        source=str(reference),
         reference=pd.read_json(reference)
     )
