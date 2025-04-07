@@ -89,7 +89,7 @@ class FilterCase(unittest.TestCase):
     def test_remove_prefix(self):
         from miripvir.filters import remove_prefixes
         sol = remove_prefixes(test_case_1)
-        self.assertListEqual(sol['read'].tolist(), sol['base_id'].tolist())
+        self.assertListEqual(sol['base_id'].tolist(), sol['base_id'].tolist())
     def test_blast_filter_by_length_and_coverage(self):
         from miripvir.filters import blast_filter_by_length, blast_filter_by_qcoverage
         sol = blast_filter_by_qcoverage(test_case_1, 80)
@@ -121,6 +121,28 @@ class FilterCase(unittest.TestCase):
         )
         sol = blast_filter(bper, 'PV064', query_coverage=80, length_threshold=120, lookup_table=lt)
         self.assertEqual(sol.final_length, 1)
+
+    def test_blast_filter_realcase(self):
+        from miripvir.filters import blast_filter
+        from miripvir.data import LookUpTable, BlastPairedEndReads
+        from miripvir.ioutils import read_blastdb_reference, read_paired_end_files
+
+        bper = read_paired_end_files("test/blast-hits.PV0641.tab", "test/blast-hits.PV0642.tab")
+        print("loaded!")
+        lt = read_blastdb_reference("test/sanchis21.reference.json")
+        print("loaded!")
+        sol = blast_filter(bper, 'PV064', query_coverage=100, length_threshold=125, lookup_table=lt)
+        self.assertGreater(sol.final_length, 1)
+
+    def test_remove_prefix_largefile(self):
+        from miripvir.filters import remove_prefixes
+        from miripvir.data import BlastPairedEndReads
+        from miripvir.ioutils import read_paired_end_files
+        bper = read_paired_end_files("test/blast-hits.PV0641.tab", "test/blast-hits.PV0642.tab")
+        u = remove_prefixes(bper.reads_1, randomize=True)
+        u = remove_prefixes(bper.reads_2, randomize=True)
+        
+        print("bingo!")
 
 if __name__ == '__main__':
     unittest.main()

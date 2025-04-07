@@ -23,4 +23,4 @@ def filter_blast(
         query_coverage=query_coverage, length_threshold=length_threshold,
         lookup_table=lookup_table
     )
-    hits.to_csv(product['species_hits'], sep=';')
+    hits.hits.to_csv(product['species_hits'], sep=';')

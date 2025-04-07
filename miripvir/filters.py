@@ -3,9 +3,10 @@ from miripvir.data import BlastPairedEndReads, LookUpTable, Hits
 from difflib import SequenceMatcher
 import logging
 from typing import List
+import random
 
 
-def blast_filter(reads: BlastPairedEndReads, library_name: str, query_coverage: int, length_threshold: int, lookup_table: LookUpTable):
+def blast_filter(reads: BlastPairedEndReads, library_name: str, query_coverage: int, length_threshold: int, lookup_table: LookUpTable) -> Hits:
     """
     Applies a protocol for filtering BLAST hits similar to what
     was implemented in McLeish2024. See the Notes section for more details.
@@ -35,8 +36,8 @@ def blast_filter(reads: BlastPairedEndReads, library_name: str, query_coverage: 
     """
     source_1 = reads.source_1
     source_2 = reads.source_2
-    reads_1 = remove_prefixes(reads.reads_1)
-    reads_2 = remove_prefixes(reads.reads_2)
+    reads_1 = remove_prefixes(reads.reads_1, randomize=True)
+    reads_2 = remove_prefixes(reads.reads_2, randomize=True)
     reads = pd.concat([reads_1, reads_2])
     
     original_length = len(reads)
@@ -138,29 +139,36 @@ def blast_display_results_by_OTUs(df: pd.DataFrame, lookup_table: pd.DataFrame):
     Returns:
         Table without ambiguous mappings
     """
-    df = pd.merge(df, lookup_table, on='ref', how='left')
+    df = pd.merge(df, lookup_table, left_on='ref', right_on='sequence_id', how='left')
     return df.value_counts(subset=['taxid', 'organism']).reset_index()
 
-def find_substring_match(x:List[str]) -> str:
+def find_substring_match(x:List[str], randomize=False, samples=1000) -> str:
     """
     Finds the minimal common substring in a list of strings
 
     Args:
         x: Input data
-        
+        random: whether to use the deterministic algorithm or not.
+        samples: number of iterations        
 
     Returns:
         Minimal common substring
+
+
     """
     minimal_match = "X"*1000
-    for i, x1 in enumerate(x[1:]):
+    if randomize:
+        x = x.copy()
+        random.shuffle(x)
+
+    for i, x1 in enumerate(x[1:samples]):
         for j, x2 in enumerate(x[:i + 1]):
             match = SequenceMatcher(None, x1, x2).find_longest_match()
             if match.size < len(minimal_match):
                 minimal_match = x2[match.a:match.a + match.size]
     return minimal_match
 
-def remove_prefixes(df: pd.DataFrame):
+def remove_prefixes(df: pd.DataFrame, randomize=False):
     """
     Removes prefix out of reads. 
 
@@ -171,7 +179,7 @@ def remove_prefixes(df: pd.DataFrame):
         Table where the ´read´ parameter should not contain a prefix
     """
     
-    example = find_substring_match(df['read'].tolist())
-    df['read'] = df['read'].apply(lambda x: x.replace(example, ''))
+    example = find_substring_match(df['read'].unique().tolist(), randomize=randomize)
+    df['base_id'] = df['read'].apply(lambda x: x.replace(example, ''))
     return df
 
