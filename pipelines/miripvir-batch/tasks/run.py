@@ -6,18 +6,28 @@ from jinja2 import Template
 template_str = """#!/bin/bash
 #SBATCH --job-name={{ run_name }}
 #SBATCH -c={{ processors }}
-#SBATCH -m={{ memory }}GB
-#SBATCH --output={{ run_name }}.$SLURM_ARRAY_TASK_ID.out
+#SBATCH --mem={{ memory }}GB
+#SBATCH --output={{ run_name }}.%a.out
+#SBATCH --error={{ run_name }}.%a.err
 #SBATCH --array=1-{{ array_length }}
 #SBATCH --time={{ time_limit }}
 #SBATCH --partition={{ partition }}
 
+source ~/.bashrc
+micromamba activate miripvir25
 
 input=run
 library_name=$(awk -v i=$SLURM_ARRAY_TASK_ID '$1==i {print $2}' $input)
 cd $library_name
-srun ploomber build -e {{ pipeline_location }}
-rm *.fastq
+
+if srun ploomber build --force -e  {{ pipeline_location }}; then
+	end_date=$(date "+%Y-%m-%d %H:%M")
+	echo "${SLURM_ARRAY_TASK_ID},${library_name},${end_date},COMPLETED" >> ../logs
+else
+    end_date=$(date "+%Y-%m-%d %H:%M")
+    echo "${SLURM_ARRAY_TASK_ID},${library_name},${end_date},FAILED" >> ../logs
+fi
+
 
 """
 
