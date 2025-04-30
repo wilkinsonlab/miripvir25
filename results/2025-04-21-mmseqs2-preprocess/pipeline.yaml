@@ -1,0 +1,12 @@
+tasks:
+  - source: process.ipynb
+    product: 
+      nb: products/out.process.ipynb
+      count: products/library_species_count-ct10.json
+      histogram_contigs_per_hit: products/contigs-per-hit.png
+    params:
+      count_threshold: 10 # Removes all hits associated to few than XX reads. 
+      taxonomy_source: "gtdb-taxonomy-reference.json"
+      sampling_table_source: "../../data/mcleish2024/nph20054-sup-0002-TablesS1.csv"
+      library_table_source: "../../data/mcleish2024/nph20054-sup-0002-TablesS2.csv"
+      rank: "species"
