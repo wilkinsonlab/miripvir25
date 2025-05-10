@@ -4,18 +4,6 @@ meta:
 
 tasks:
 
-  - name: copy
-    source: scripts/scp.sh
-    product: 
-      output_read1: "{{cwd}}/read1.fastq"
-      output_read2: "{{cwd}}/read2.fastq"
-    params:
-      remote_path: "{{remote_path}}"
-      user: "{{user}}"
-      url: "{{url}}"
-      input_read1: "{{input_read1}}"
-      input_read2: "{{input_read2}}"
-
   - source: quality
     source: scripts/quality.sh
     product: 
@@ -26,6 +14,8 @@ tasks:
       primers: "{{primers}}"
       quality_threshold: "{{quality_threshold}}"
       threads: "{{threads}}"
+      input_read1: "{{cwd}}/{{input_read1}}"
+      input_read2: "{{cwd}}/{{input_read2}}"
 
   - name: classify
     source: scripts/classify.sh
