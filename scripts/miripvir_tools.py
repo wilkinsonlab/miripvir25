@@ -84,7 +84,7 @@ def filter_blast(
 @click.option("--count_threshold", "-t", default=10, help="Count threshold to output an OTU")
 @click.argument("FILE")
 @click.argument("OUTPUT")
-def kraken2otus(file, output, library, count_threshold):
+def kraken2otus(file, output, library_name, count_threshold):
     """
 
     Maps the Kraken2 output to a list of taxon - number of sequences, 
@@ -104,12 +104,12 @@ def kraken2otus(file, output, library, count_threshold):
 
     df['classification-ratio'] = classification_ratio
     df['scientific_name'] = df['taxonid'].apply(obtain_scientific_name)
-    df['library'] = library
+    df['library'] = library_name
     df = df.query(f'count > {count_threshold}')
     df[['library', 'classification-ratio', 'taxonid', 'scientific_name', 'count']].to_csv(output, index=None)
 
 
 cli.add_command(filter_blast)
-
+cli.add_command(kraken2otus)
 if __name__ == "__main__":
     cli()
