@@ -6,7 +6,10 @@ from typing import List
 import random
 
 
-def blast_filter(reads: BlastPairedEndReads, library_name: str, query_coverage: int, length_threshold: int, lookup_table: LookUpTable) -> Hits:
+def blast_filter(
+    reads: BlastPairedEndReads, library_name: str, query_coverage: int, length_threshold: int, 
+    lookup_table: LookUpTable, remove_prefix=False
+) -> Hits:
     """
     Applies a protocol for filtering BLAST hits similar to what
     was implemented in McLeish2024. See the Notes section for more details.
@@ -36,8 +39,8 @@ def blast_filter(reads: BlastPairedEndReads, library_name: str, query_coverage: 
     """
     source_1 = reads.source_1
     source_2 = reads.source_2
-    reads_1 = remove_prefixes(reads.reads_1, randomize=True)
-    reads_2 = remove_prefixes(reads.reads_2, randomize=True)
+    reads_1 = remove_prefixes(reads.reads_1, remove_prefix=remove_prefix, randomize=True)
+    reads_2 = remove_prefixes(reads.reads_2, remove_prefix=remove_prefix, randomize=True)
     reads = pd.concat([reads_1, reads_2])
     
     original_length = len(reads)
@@ -124,7 +127,20 @@ def blast_filter_ambiguous(df:pd.DataFrame) -> pd.DataFrame:
         Table without ambiguous mappings
     """
     # TODO: Move this to the function where we read the files.
-    df['ref'] = df['ref'].apply(lambda x: x.replace("ref|", "").replace("|", ""))
+    df['ref'] = df['ref'].apply(
+        lambda x: x.replace(
+            "ref|", ''
+        ).replace(
+            'gb|', ''
+        ).replace(
+            'emb|', ''
+        ).replace(
+            'dbj|', ''
+        ).replace(
+            'tpe|', ''
+        ).replace(
+            '|', ''
+        ))
     unambiguous = df.value_counts(subset=['base_id', 'ref']).reset_index().value_counts(subset=['base_id']).reset_index().query('count < 2')
     return df[df.base_id.isin(unambiguous.base_id)].copy()
     
@@ -168,7 +184,7 @@ def find_substring_match(x:List[str], randomize=False, samples=1000) -> str:
                 minimal_match = x2[match.a:match.a + match.size]
     return minimal_match
 
-def remove_prefixes(df: pd.DataFrame, randomize=False):
+def remove_prefixes(df: pd.DataFrame, remove_prefix=True, randomize=True):
     """
     Removes prefix out of reads. 
 
@@ -178,8 +194,10 @@ def remove_prefixes(df: pd.DataFrame, randomize=False):
     Returns:
         Table where the ´read´ parameter should not contain a prefix
     """
-    
-    example = find_substring_match(df['read'].unique().tolist(), randomize=randomize)
-    df['base_id'] = df['read'].apply(lambda x: x.replace(example, ''))
+    if remove_prefix:
+        example = find_substring_match(df['read'].unique().tolist(), randomize=randomize)
+        df['base_id'] = df['read'].apply(lambda x: x.replace(example, ''))
+    else:
+        df['base_id'] = df['read']
     return df
 
