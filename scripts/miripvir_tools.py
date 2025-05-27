@@ -242,6 +242,28 @@ def simulate_abundance(db, product, host_taxon_id, host_abundance, mean, sigma):
     sampling_df[['index_name', 'abundance']].to_csv(product + '.abundances.txt', sep='\t', header=None, index=None)
 
 
+@click.command()
+@click.argument("FORWARD_FILE")
+@click.argument("BACKWARD_FILE")
+@click.argument("OUTPUT")
+def report_abundances(forward_file, backward_file, output):
+    def open_simulation_results(simulation_file):
+        with open(simulation_file, 'r') as f:
+            ids = list(map(lambda x: x[1:].strip(), filter(lambda x: x[0] == '@', f.readlines())))
+        ids = pd.DataFrame(ids, columns=['header'])
+
+        ids['taxid'] = ids['header'].apply(lambda x: x.split('_')[0])
+        return ids
+    R1 = open_simulation_results(forward_file)
+    R2 = open_simulation_results(backward_file)
+    R1_counts = (R1.value_counts(subset='taxid') /  len(R1)).reset_index()
+    R2_counts = (R2.value_counts(subset='taxid') /  len(R1)).reset_index()
+    R1_counts['strand'] = 'R1'
+    R2_counts['strand'] = 'R2'
+    counts = pd.concat([R1_counts, R2_counts]).reset_index()
+    counts.to_csv(output, sep=';', index=None)
+
+
 
 @click.command()
 @click.option('--domains', '-d', multiple=True, help="filter domains out of the sample. Use -d unknown to keep unclassified sequences")
@@ -285,5 +307,7 @@ cli.add_command(kraken2otus)
 cli.add_command(simulate_abundance)
 cli.add_command(db_to_fasta)
 cli.add_command(kraken_filter)
+cli.add_command(report_abundances)
+
 if __name__ == "__main__":
     cli()
