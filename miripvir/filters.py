@@ -1,5 +1,5 @@
 import pandas as pd
-from miripvir.data import BlastPairedEndReads, LookUpTable, Hits
+from miripvir.data import BlastPairedEndReads, UnpairedEndReads, LookUpTable, Hits
 from difflib import SequenceMatcher
 import logging
 from typing import List
@@ -67,6 +67,57 @@ def blast_filter(
         original_length=original_length, final_length=len(reads),
         source_1=source_1, source_2=source_2
     )
+    return hits
+
+def blast_filter_lc(
+    reads: UnpairedEndReads, library_name: str, query_coverage: int, length_threshold: int, 
+    lookup_table: LookUpTable
+) -> Hits:
+    """
+    Applies a protocol for filtering BLAST hits similar to what
+    was implemented in McLeish2024. See the Notes section for more details.
+
+    Args:
+        reads: Sequencing reads (forward and backward) mapped by BLAST in table format.
+        library_name: Name of the library, needed to output files.
+        query_coverage: Percentage of the query that should be spanned by the mapped fragments.
+        length_threshold: Length of the mapped sequence.
+        lookup_table: Table connecting the IDs of the mapping sequences with the accession and taxids
+
+    Returns:
+        Filtered and grouped hits
+
+
+    Notes:
+
+        This command enables a complex pipeline with different steps. These ones
+        are bundled together in this script to ease testing.
+        1. Remove mapped sequences with lengths under length_threshold
+        2. Remove mapped sequences with query coverages under query_coverage
+        3. Remove sequences whose paired ends did not align to the same reference sequences
+        4. Remove sequences whose alignment is ambiguous (e.g. mapping to two different locations)
+        5. Group all results by species hits
+
+
+    """
+    # TODO: Make this 100X simpler
+    source_1 = reads.source
+    reads = reads.reads.copy()
+    reads = remove_prefixes(reads, remove_prefix=False, randomize=True)
+    original_length = len(reads)
+    # STEP 1 - Mapping criteria
+    logging.debug(f"original file size: {len(reads)}")
+    reads = blast_filter_by_length(reads, length_threshold)
+    logging.debug(f"after filter by length>={length_threshold}, size: {len(reads)}")
+    reads = blast_filter_by_qcoverage(reads, query_coverage)
+    logging.debug(f"after filter by qcovs>={query_coverage}, size: {len(reads)}")
+    # STEP 3 - Remove ambiguous mappings
+    reads = blast_filter_ambiguous(reads)
+    logging.debug(f"after filter by ambiguity, size: {len(reads)}")
+    # STEP 4 - Group and report by species
+    hits = blast_display_results_by_OTUs(reads, lookup_table.reference)
+    hits['library'] = library_name
+    # I removed the output class here
     return hits
     
 

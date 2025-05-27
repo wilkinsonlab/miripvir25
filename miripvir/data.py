@@ -11,6 +11,12 @@ class BlastPairedEndReads:
     reads_2: pd.DataFrame
     source_1: str
     source_2: str
+
+@dataclass(config=GeneralConfig)
+class UnpairedEndReads:
+    reads: pd.DataFrame
+    source: str
+
 @dataclass(config=GeneralConfig)
 class LookUpTable:
     

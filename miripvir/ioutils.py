@@ -1,5 +1,5 @@
 import pandas as pd
-from miripvir.data import BlastPairedEndReads, LookUpTable
+from miripvir.data import BlastPairedEndReads, LookUpTable, UnpairedEndReads
 
 def read_paired_end_files(file_forward: str, file_backward: str)->BlastPairedEndReads:
     """
@@ -19,6 +19,24 @@ def read_paired_end_files(file_forward: str, file_backward: str)->BlastPairedEnd
         reads_1=read1, reads_2=read2, source_1=str(file_forward), source_2=str(file_backward)
     )
     return bper
+
+
+def read_single_end_files(file: str)-> UnpairedEndReads:
+    """
+    Reads a BLAST result applied to Illumina paired-end results.
+
+    Args:
+        file_forward: strand 1
+        file_backward: strand 2
+    Return:
+        An object containing each of the reads and the files they come from.
+    """
+    read = pd.read_csv(file, sep="\s+", header=None, names=['read', 'ref', 'identity', 'length', 'mismatch', 'gap', 'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore', 'qlen', 'qcovs'])
+    uper = UnpairedEndReads(
+        reads=read, source=str(file)
+    )
+    return uper
+
 
 def read_blastdb_reference(reference: str)-> LookUpTable:
     """
