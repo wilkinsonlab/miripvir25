@@ -1,0 +1,24 @@
+tasks:
+
+  - name: accessions
+    source: tasks.run.obtain_genome_accessions
+    params:
+      reference_file: "{{input}}"
+    product: 
+      genome_accessions: "{{cwd}}/{{name}}.accessions.csv"
+      
+  - name: download
+    source: scripts/download-genomes.sh
+    params:
+      path: "{{cwd}}"
+    product:
+      log: "{{cwd}}/.log"
+      failures: "{{cwd}}/.failures"
+      success: "{{cwd}}/.success"
+      
+  - name: catalogue
+    source: tasks.run.catalogue
+    params:
+      path: "{{cwd}}"
+    product:
+      sequence_index: "{{cwd}}/{{name}}.db.json"
