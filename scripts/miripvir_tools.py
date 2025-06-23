@@ -243,6 +243,54 @@ def simulate_abundance(db, product, host_taxon_id, host_abundance, mean, sigma):
 
 
 @click.command()
+@click.option("--taxon_mean", "-m", default=0.5,)
+@click.option("--taxon_sigma", "-s", default=2.0,)
+@click.option("--cds_mean", "-n", default=0.5)
+@click.option("--cds_sigma", "-t", default=2.0)
+@click.option("--read_length", "-r", default=150)
+@click.argument("DB")
+@click.argument("PRODUCT")
+def simulate_metranscriptomic_abundances(
+    db, product, 
+    taxon_mean, taxon_sigma, cds_mean, cds_sigma, 
+    read_length
+):
+    def simulate_lognormal_data(x, mean, sigma):
+        """
+        Generates an array of log-normally distributed 
+        frequencies, so the total sum of the frequencies is
+        still equal to 1. 
+
+        """
+        y = np.random.lognormal(
+            mean=mean, 
+            sigma=sigma, 
+            size=x 
+        )
+        return y / y.sum()
+
+    sequence_db = pd.read_json(db).query(f'sequence_length > {read_length}').copy()
+    sequence_db['weight'] = sequence_db.groupby('taxid')['sequence_length'].transform(lambda x: x / x.sum())
+    sequence_db['s'] = sequence_db.groupby(['taxid'], as_index=False).apply(lambda x: simulate_lognormal_data(len(x), cds_mean, cds_sigma)).explode().values
+
+    taxa = sequence_db[['taxid']].drop_duplicates('taxid')
+    taxa['r'] = np.random.lognormal(
+        mean=taxon_mean, 
+        sigma=taxon_sigma, 
+        size=len(taxa)
+    )
+    taxa['r'] = taxa['r'] / taxa['r'].sum()
+    sequence_db = pd.merge(sequence_db, taxa, on='taxid')
+    sequence_db['abundance'] = sequence_db['r'] * sequence_db['weight'] * sequence_db['s'] 
+    sequence_db['abundance'] = sequence_db['abundance'] / sequence_db['abundance'].sum()
+    fasta = sequence_db[['taxid', 'index', 'sequence']].apply(lambda x: convert_to_fasta(x['taxid'], x['index'], x['sequence']), axis=1).to_list()
+    with open(product + '.fasta', 'w') as f:
+        f.write('\n'.join(fasta))
+    sequence_db['index_name'] = sequence_db.apply(lambda x: "{0}_{1}".format(x['taxid'], x['index']), axis=1)
+    sequence_db[['index_name', 'abundance']].to_csv(product + '.abundance.txt', sep='\t', header=None, index=None)
+
+
+@click.command()
 @click.argument("FORWARD_FILE")
 @click.argument("BACKWARD_FILE")
 @click.argument("OUTPUT")
@@ -305,6 +353,7 @@ cli.add_command(filter_blast)
 cli.add_command(filter_blast_lc)
 cli.add_command(kraken2otus)
 cli.add_command(simulate_abundance)
+cli.add_command(simulate_metranscriptomic_abundances)
 cli.add_command(db_to_fasta)
 cli.add_command(kraken_filter)
 cli.add_command(report_abundances)
