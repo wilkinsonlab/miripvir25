@@ -13,7 +13,11 @@ option_list <- list(
     make_option(c("-r", "--repetitions"), type = "integer", default = 1,
                             help = "Number of repetitions", metavar = "integer"),
     make_option(c("-o", "--output"), type = "character", default = NULL,
-                            help = "Output file path", metavar = "character")
+                            help = "Output file path", metavar = "character"),
+    make_option(c("-m", "--modularity"), action = "store_true", default = TRUE,
+                help = "Include modularity"),
+    make_option(c("-c", "--cores"), type = "integer", default = 1,
+                    help = "Number of cores", metavar = "integer")
 )
 
 # Parse command line arguments
@@ -34,28 +38,48 @@ cat("Output file:", opt$output, "\n")
 u <- read.csv(opt$file, header = TRUE, row.names = 1, sep=";")
 
 # 1. Calculate observed metrics
-observed <- networklevel(u, index = c("NODF", "connectance", "modularity"))
-
+if (opt$modularity) {
+  features =  c("NODF", "connectance", "modularity")
+  
+  cat("Computing modularity")
+} else {
+  features =  c("NODF", "connectance")
+  cat("Not computing modularity")
+}
+start_time <- proc.time()
+observed <- networklevel(u, index = features)
 # 2. Create null models (100 iterations for speed - increase for final run)
 # null_models <- nullmodel(u, N=opt$repetitions, method="r2d")
 
-n_cores <- detectCores() - 1  # Use all but one core
+if (opt$cores > detectCores() - 1) {
+  n_cores <- detectedCores() - 1 
+  cat("Cannot use more cores than available. Using", n_cores, "\n")
+} else{
+  n_cores <- opt$cores
+}
+
 cat("Using", n_cores, "cores for parallel processing.\n")
 
 cl <- makeCluster(n_cores)
-clusterExport(cl, varlist = c("u", "networklevel", "nullmodel"))
+clusterExport(cl, varlist = c("u", "networklevel", "nullmodel", "features"))
 
 # 3. Calculate metrics for null models
 
 nulls <- parLapply(cl, 1:opt$repetitions, function(i) {
   nm <- nullmodel(u, N = 1, method = "r2d")[[1]]
-  networklevel(nm, index = c("NODF", "connectance", "modularity"))
+  networklevel(nm, index = features)
 })
 stopCluster(cl)
 null_results <- do.call(rbind, nulls)
 
-# 4. Save results to CSV files
-write.csv(data.frame(Metric = names(observed), Value = observed),
-          paste(opt$output, "observed.csv", sep="."), row.names = FALSE)
+end_time <- proc.time()
+elapsed_time <- end_time - start_time
+elapsed_time_seconds <- as.numeric(elapsed_time[3])
+observed_df <- data.frame(Metric = c(names(observed), "ElapsedTime"), Value = c(observed, elapsed_time_seconds))
 
+
+# 4. Save results to CSV files
+# write.csv(data.frame(Metric = names(observed), Value = observed),
+#           paste(opt$output, "observed.csv", sep="."), row.names = FALSE)
+write.csv(observed_df, paste(opt$output, "observed.csv", sep="."), row.names = FALSE)
 write.csv(null_results, paste(opt$output, "null.csv", sep="."), row.names = FALSE)
