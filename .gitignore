@@ -3,6 +3,9 @@ results/b2s-pv064-2025-03-05/
 results/b2s-scp-pv064-2025-03-06/
 results/marco-mapping-2025-02-25/
 results/
+figures/
 data/
 *.metadata
-test/*
+build/
+miripvir/__pycache__
+*.egg-info
