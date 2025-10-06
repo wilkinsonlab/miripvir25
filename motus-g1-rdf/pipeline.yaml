@@ -1,0 +1,45 @@
+tasks:
+  - name: sites_and_libraries
+    source: sites_and_libraries.ipynb
+    params:
+      mcleish24_tables1: "input/mcleish24.TableS1.csv"
+      mcleish24_tables2: "input/mcleish24.TableS2.csv"
+    product:
+      nb: output/sites_and_libraries.ipynb
+      data: output/library.json
+
+  - name: host
+    source: host.ipynb
+    params:
+      mcleish24_tables2: "input/mcleish24.TableS2.csv"
+    product:
+      nb: output/host.ipynb
+      data: output/host.json
+
+  - name: virus
+    source: virus.ipynb
+    params:
+      mcleish24_tables4: "input/mcleish24.TableS4.csv"
+      virus_hits: input/val_158_otu_host_df.csv
+    product:
+      data: output/virus.json
+      nb: output/virus.ipynb
+
+
+  - name: bacteria
+    source: bacteria.ipynb
+    params:
+      tree: input/bac120.tree
+      tree_metadata: input/bac120_metadata.tsv
+      motus_path: "input/motus-g1/"
+      motus_file: "source.csv"
+      sanchis_tables1: "input/sanchis21.tableS1.csv"
+    product:
+      nb: output/bacteria.ipynb
+      data: output/bacteria.json
+
+  
+  - name: build_ttl
+    source: convert.sh 
+    product: 
+      ttl: output/mulvirisk.v4.ttl
