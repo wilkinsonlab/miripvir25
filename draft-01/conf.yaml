@@ -1,0 +1,10 @@
+habitat_palette:
+  Crop: "#0CAB7B"
+  Edge: "#3A8DFA"
+  Oak: "#FB2231"
+  Wasteland: "#FFC51F"
+node_palette:
+  host: "#73deac"
+  Virus: "#e58bb1"
+  Bacteria: "#8bc8e5"
+database: "2025-10-21"
