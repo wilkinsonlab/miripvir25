@@ -17,7 +17,12 @@ This repo contains important information concerning:
 - **test**. 
 - **notebooks**. Each notebook has the data in which it was created, and its goal.
 - **data**. It contains important reference files.
+- **analysis**. It contains the analysis pipeline in the form of Jupyter Notebooks.
 
 ## Environment
 
 We are aiming to create a single but powerful environment to run everything.
+
+## Docs
+
+Use `mkdocs serve` at the root of this repo.
