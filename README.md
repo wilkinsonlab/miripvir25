@@ -1,28 +1,132 @@
-# MIRIPVIR25
+# MIRIPVIR25 🦠🧫
 
-Multiple Infection Role in Plant Virus Infection Risk
+**Multiple Infection Role in Plant Virus Infection Risk**
 
-## Summary
+## Project overview
 
-This repo contains important information concerning:
-- project pipelines to analyze and annotate metagenomic data
-- project pipelines to generate FAIR records
-- project pipelines to create predictive models
+MIRIPVIR25 explores virus–bacteria interactions in plant-associated metatranscriptomes. To our knowledge, this is a pioneering effort in the field of environmental microbiology. The repository contains data and analysis notebooks.
 
-## Content
+---
 
-- **pipelines**. It contains the following pipelines.
-    - *b2s*: blast to species. It enables to run paired-end illumina sequencing against a genome database to find meaningful hits.
-- **results**. It contains the results of different pipelines run
-- **test**. 
-- **notebooks**. Each notebook has the data in which it was created, and its goal.
-- **data**. It contains important reference files.
-- **analysis**. It contains the analysis pipeline in the form of Jupyter Notebooks.
+## Table of contents
 
-## Environment
+- [Quick start](#quick-start) ✅
+- [Prerequisites](#prerequisites) 🔧
+- [Install & run (using uv)](#install--run-using-uv) ⚙️
+- [Repository structure](#repository-structure) 📁
+- [Running analyses & docs](#running-analyses--docs) 📊
+- [Tests & quality checks](#tests--quality-checks) ✅
+- [Contributing](#contributing) 🤝
+- [License & contact](#license--contact) 📜
 
-We are aiming to create a single but powerful environment to run everything.
+---
 
-## Docs
+## Quick start
 
-Use `mkdocs serve` at the root of this repo.
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/wilkinsonlab/miripvir25.git
+   cd miripvir25
+   ```
+
+2. Install the `uv` package manager (recommended via pipx) and use it to install dependencies (see below).
+
+3. Run the analysis or serve docs (examples below).
+
+---
+
+## Prerequisites
+
+- macOS / Linux / WSL (Linux)
+- Python 3.10+ recommended
+- git, make, and basic Unix tools
+- `uv` (https://docs.astral.sh/uv/)
+
+---
+
+## Install & run (using uv)
+
+Install `uv`:
+
+Please see the official documentation and installation instructions at: https://docs.astral.sh/uv/
+
+Install project dependencies with `uv`:
+
+```bash
+# from project root
+uv install         # installs dependencies defined in `pyproject.toml`
+```
+
+Run common commands through `uv` (delegates to the project's environment):
+
+```bash
+# Serve the docs locally
+uv run mkdocs serve
+# Run notebooks or a Jupyter server
+uv run jupyter lab
+```
+
+Notes:
+- If you don't have `uv` available, you can fall back to `python -m pip install -e .` or use the provided `environment.yml` to create a conda environment.
+
+---
+
+## Repository structure
+
+Top-level layout (selected):
+
+- `analysis/` — Jupyter notebooks and analysis scripts
+- `data/` — reference files and genomes
+- `docs/` — MkDocs documentation and site content
+- `pipelines/` — reproducible pipelines (e.g., `b2s`)
+- `results/` — pipeline output and reports
+- `scripts/` — helper scripts and utilities
+- `src/` — source code and modules
+- `test/` — tests and QA
+- `pyproject.toml`, `environment.yml`, `setup.cfg` — project metadata and dependency specs
+
+---
+
+## Running analyses & docs
+
+- Analysis notebooks: open with `uv run jupyter lab` and run notebooks in `analysis/`.
+- Pipelines: many pipelines include a `run.sh` or README in their folder (e.g., `analysis/run.sh`). Follow the comments in those scripts.
+- Docs: to preview documentation locally:
+
+```bash
+uv run mkdocs serve
+# open http://127.0.0.1:8000 in your browser
+```
+
+---
+
+## Tests & quality checks
+
+Run tests and linters via `uv`:
+
+```bash
+# run tests using Python's builtin unittest via uv
+uv run python -m unittest discover -v
+
+uv run flake8  # if configured
+uv run pre-commit run --all-files
+```
+
+---
+
+## Contributing
+
+Please open issues or pull requests. Follow these conventions:
+
+- Create a branch `feat/your-feature` or `fix/issue-number`
+- Add tests for new features or fixes
+- Keep changes small and documented
+
+---
+
+## License & contact
+
+See the `LICENSE` file in the repository for license details (contact maintainers if missing). For questions, open an issue or contact the maintainers listed in `pyproject.toml`.
+
+---
