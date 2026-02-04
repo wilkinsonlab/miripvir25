@@ -1,0 +1,27 @@
+#mOTU	consensus_taxonomy	NCBI_tax_id	PV219
+ref_mOTU_v31_00962	Arthrobacter sp. RIT-PI-e	1681197	1
+ref_mOTU_v31_00975	Kocuria polaris	136273	1
+ref_mOTU_v31_01128	Methylobacterium sp. [Methylobacterium sp. Leaf87/Methylobacterium sp. Leaf100/Methylobacterium sp. Leaf102/Methylobacterium sp. Leaf112/Methylobacterium sp. Leaf469]	NA	1
+ref_mOTU_v31_01336	Sphingomonas sp. [Sphingomonas sp. Ant20/Sphingomonas sp. FUKUSWIS1/Sphingomonas sp. Leaf226/Sphingomonas sp. Leaf30]	NA	1
+ref_mOTU_v31_01410	Rhodococcus fascians [Rhodococcus sp. JG-3/Rhodococcus sp. PML026/Rhodococcus sp. PBTS 2/Rhodococcus sp. Leaf233/Rhodococcus fascians]	1828	2
+ref_mOTU_v31_01745	Exiguobacterium undae	169177	1
+ref_mOTU_v31_01848	Pantoea sp. [Pantoea sp. 9140/Pantoea sp. MBLJ3/Pantoea sp. CFSAN033090/Pantoea sp. OV426/Pantoea vagans/Pantoea sp. aB/Pantoea agglomerans/Pantoea ananatis]	NA	1
+ref_mOTU_v31_02723	Arthrobacter sp. OV608	1882768	1
+ref_mOTU_v31_02724	Pseudarthrobacter siccitolerans	861266	1
+ref_mOTU_v31_02727	Arthrobacter sp. P2b	1938741	1
+ref_mOTU_v31_02957	Paracoccus sp. 228	1192054	1
+ref_mOTU_v31_03148	uncultured Clostridium sp.	59620	1
+ref_mOTU_v31_04406	Lactobacillus sanfranciscensis	1625	1
+ref_mOTU_v31_04477	Rhodococcus sp. [Rhodococcus sp. UNC23MFCrub1.1/Rhodococcus sp. Leaf225/Rhodococcus sp. Leaf258]	NA	1
+ref_mOTU_v31_04478	Rhodococcus sp. [Rhodococcus sp. MEB064/Rhodococcus sp. Leaf7/Rhodococcus sp. Leaf247]	NA	1
+ref_mOTU_v31_04743	Rhizobium sp. [Rhizobium sp. NFR12/Rhizobium sp. Leaf306/Rhizobium sp. Leaf321]	NA	1
+ref_mOTU_v31_04813	Frigoribacterium sp. [Frigoribacterium sp. MEB024/Frigoribacterium sp. RIT-PI-h/Frigoribacterium sp. Leaf8/Frigoribacterium sp. Leaf44/Frigoribacterium sp. Leaf254/Frigoribacterium sp. Leaf415/Frigoribacterium sp. MCBA15_019]	NA	1
+ref_mOTU_v31_05164	Microbacterium testaceum	2033	1
+ref_mOTU_v31_05300	Methylobacterium sp. [Methylobacterium sp. Leaf113/Methylobacterium sp. Leaf117]	NA	1
+ref_mOTU_v31_05307	Rathayibacter sp. [Rathayibacter sp. Leaf296/Rathayibacter sp. Leaf299/Rathayibacter sp. VKM Ac-2630]	NA	1
+ref_mOTU_v31_05316	Nocardioides sp. [Nocardioides sp. Leaf285/Nocardioides sp. Leaf307]	NA	1
+ref_mOTU_v31_06556	Nocardioides lianchengensis	1045774	1
+ref_mOTU_v31_08781	Erwinia gerundensis	1619313	1
+ref_mOTU_v31_11448	Friedmanniella luteola	546871	1
+ext_mOTU_v31_18793	Sphingomonas species incertae sedis	NA	1
+unassigned	unassigned	NA	5

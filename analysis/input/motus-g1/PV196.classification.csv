@@ -1,0 +1,32 @@
+#mOTU	consensus_taxonomy	NCBI_tax_id	PV196
+ref_mOTU_v31_00068	Enterobacter kobei [Enterobacter sp. SA187/Enterobacter kobei]	208224	1
+ref_mOTU_v31_00128	Pseudomonas cedrina/orientalis [Pseudomonas sp. 24 E 13/Pseudomonas sp. 28 E 9/Pseudomonas sp. 31 R 17/Pseudomonas sp. 34 E 7/Pseudomonas sp. 37 R 15/Pseudomonas sp. 44 R 15/Pseudomonas cedrina/Pseudomonas orientalis]	NA	1
+ref_mOTU_v31_00133	 Pseudomonas sp. [Paraburkholderia insulsa/Pseudomonadales bacterium RIFCSPLOWO2_12_60_38/Pseudomonadales bacterium RIFCSPLOWO2_12_FULL_59_450/Pseudomonas azotoformans/Pseudomonas canadensis/Pseudomonas extremorientalis/Pseudomonas fluorescens/Pseudomonas lactis/Pseudomonas libanensis/Pseudomonas marginalis/Pseudomonas paralactis/Pseudomonas simiae/Pseudomonas sp. 24 E 1/Pseudomonas sp. 24 R 17/Pseudomonas sp. 35 E 8/Pseudomonas sp. 52 E 6/Pseudomonas sp. 58 R 12/Pseudomonas sp. AP42/Pseudomonas sp. BRG-100/Pseudomonas sp. bs2935/Pseudomonas sp. BTN1/Pseudomonas sp. CBZ-4/Pseudomonas sp. CF150/Pseudomonas sp. CFT9/Pseudomonas sp. CHM02/Pseudomonas sp. Eur1 9.41/Pseudomonas sp. FH1/Pseudomonas sp. FSL W5-0203/Pseudomonas sp. ICMP 19500/Pseudomonas sp. MF6394/Pseudomonas sp. NBRC 111137/Pseudomonas sp. NBRC 111138/Pseudomonas sp. NFPP02/Pseudomonas sp. NFPP04/Pseudomonas sp. NFPP11/Pseudomonas sp. NFPP24/Pseudomonas sp. NFPP28/Pseudomonas sp. NFR02/Pseudomonas sp. NFR09/Pseudomonas sp. OV546/Pseudomonas sp. R81/Pseudomonas sp. Root569/Pseudomonas sp. Root9/Pseudomonas sp. S1E40/Pseudomonas sp. WCS374/Pseudomonas synxantha/Pseudomonas tolaasii/Pseudomonas trivialis]	NA	1
+ref_mOTU_v31_00240	Pseudomonas punonensis/seleniipraecipitans	NA	6
+ref_mOTU_v31_00522	Duganella sp. Leaf126	1736266	1
+ref_mOTU_v31_00962	Arthrobacter sp. RIT-PI-e	1681197	2
+ref_mOTU_v31_00975	Kocuria polaris	136273	3
+ref_mOTU_v31_01121	Methylobacterium sp. [Methylobacterium sp. Leaf86/Methylobacterium sp. Leaf91]	NA	1
+ref_mOTU_v31_01221	Planococcus rifietoensis	200991	1
+ref_mOTU_v31_01314	Microbacterium sp. [Microbacterium sp. CGR1/Microbacterium sp. Root280D1/Microbacterium sp. 1.5R]	NA	1
+ref_mOTU_v31_01410	Rhodococcus fascians [Rhodococcus sp. JG-3/Rhodococcus sp. PML026/Rhodococcus sp. PBTS 2/Rhodococcus sp. Leaf233/Rhodococcus fascians]	1828	1
+ref_mOTU_v31_01642	Pantoea latae/septica [Pantoea sp. NGS-ED-1003/Pantoea latae/Pantoea septica]	NA	1
+ref_mOTU_v31_01772	Amycolatopsis pretoriensis	218821	1
+ref_mOTU_v31_01848	Pantoea sp. [Pantoea sp. 9140/Pantoea sp. MBLJ3/Pantoea sp. CFSAN033090/Pantoea sp. OV426/Pantoea vagans/Pantoea sp. aB/Pantoea agglomerans/Pantoea ananatis]	NA	2
+ref_mOTU_v31_02584	Enterobacteriaceae sp. [Klebsiella michiganensis/Enterobacter sp. Ag1/Cedecea sp. NFIX57/Cedecea neteri]	NA	1
+ref_mOTU_v31_02957	Paracoccus sp. 228	1192054	1
+ref_mOTU_v31_02958	Paracoccus sp. PAMC 22219	1569209	1
+ref_mOTU_v31_03148	uncultured Clostridium sp.	59620	10
+ref_mOTU_v31_03754	Pantoea sp. IMH	1267600	6
+ref_mOTU_v31_03887	Curtobacterium flaccumfaciens [Curtobacterium sp. UNCCL17/Curtobacterium sp. Leaf154/Curtobacterium sp. MCBA15_005/Curtobacterium sp. MCBA15_007/Curtobacterium sp. MMLR14_002/Curtobacterium sp. MMLR14_014/Curtobacterium flaccumfaciens]	2035	1
+ref_mOTU_v31_04477	Rhodococcus sp. [Rhodococcus sp. UNC23MFCrub1.1/Rhodococcus sp. Leaf225/Rhodococcus sp. Leaf258]	NA	1
+ref_mOTU_v31_05295	Sanguibacter keddieii	60920	2
+ref_mOTU_v31_05307	Rathayibacter sp. [Rathayibacter sp. Leaf296/Rathayibacter sp. Leaf299/Rathayibacter sp. VKM Ac-2630]	NA	1
+ref_mOTU_v31_07272	Saccharothrix espanaensis	103731	1
+ref_mOTU_v31_07437	Enterobacteriaceae bacterium LSJC7	1224136	3
+ref_mOTU_v31_08427	Arthrobacter sp. L77	1496689	1
+ref_mOTU_v31_08781	Erwinia gerundensis	1619313	10
+ref_mOTU_v31_09220	Arthrobacter sp. Leaf234	1736303	1
+ref_mOTU_v31_10306	Paenibacillus sp. TI45-13ar	1886670	1
+ref_mOTU_v31_10768	Psychrobacter alimentarius	261164	1
+unassigned	unassigned	NA	3
