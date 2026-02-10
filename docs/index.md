@@ -4,19 +4,5 @@ author: Bruno Cuevas
 ---
 # Miripvir
 
-Multiple Infection Role in Plant Virus Infection Risk
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml
-    docs/
-        index.md
-
+This project aims to enable the study of virus-bacteria cooccurrences in an HTS field-survey in South Central Spain. The whole project includes files that were employed at some point for this goal, together with the analysis pipeline that makes the final figures.
 

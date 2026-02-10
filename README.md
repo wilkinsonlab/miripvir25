@@ -23,15 +23,13 @@ MIRIPVIR25 explores virus–bacteria interactions in plant-associated metatransc
 
 ## Quick start
 
-1. Clone the repo:
+1. Install the `uv` package manager (recommended via pipx) and use it to install dependencies (see below).
+2. Clone the repo:
 
    ```bash
    git clone https://github.com/wilkinsonlab/miripvir25.git
    cd miripvir25
    ```
-
-2. Install the `uv` package manager (recommended via pipx) and use it to install dependencies (see below).
-
 3. Run the analysis or serve docs (examples below).
 
 ---
@@ -56,6 +54,12 @@ Install project dependencies with `uv`:
 ```bash
 # from project root
 uv install         # installs dependencies defined in `pyproject.toml`
+```
+
+Install manually `daforfer`
+
+```bash
+uv pip install git+https://github.com/brunocuevas/daforfer
 ```
 
 Run common commands through `uv` (delegates to the project's environment):
@@ -108,20 +112,7 @@ Run tests and linters via `uv`:
 ```bash
 # run tests using Python's builtin unittest via uv
 uv run python -m unittest discover -v
-
-uv run flake8  # if configured
-uv run pre-commit run --all-files
 ```
-
----
-
-## Contributing
-
-Please open issues or pull requests. Follow these conventions:
-
-- Create a branch `feat/your-feature` or `fix/issue-number`
-- Add tests for new features or fixes
-- Keep changes small and documented
 
 ---
 
