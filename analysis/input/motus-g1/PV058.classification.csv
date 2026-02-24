@@ -1,6 +1,3 @@
 #mOTU	consensus_taxonomy	NCBI_tax_id	PV058
-ref_mOTU_v31_00128	Pseudomonas cedrina/orientalis [Pseudomonas sp. 24 E 13/Pseudomonas sp. 28 E 9/Pseudomonas sp. 31 R 17/Pseudomonas sp. 34 E 7/Pseudomonas sp. 37 R 15/Pseudomonas sp. 44 R 15/Pseudomonas cedrina/Pseudomonas orientalis]	NA	1
-ref_mOTU_v31_00925	bacteria symbiont BFo1 of Frankliniella occidentalis	1628855	2
-ref_mOTU_v31_01848	Pantoea sp. [Pantoea sp. 9140/Pantoea sp. MBLJ3/Pantoea sp. CFSAN033090/Pantoea sp. OV426/Pantoea vagans/Pantoea sp. aB/Pantoea agglomerans/Pantoea ananatis]	NA	1
+ref_mOTU_v31_00456	Comamonas granuli [Burkholderiales bacterium 68-12/Comamonas granuli]	290309	1
 ref_mOTU_v31_03148	uncultured Clostridium sp.	59620	4
-ref_mOTU_v31_08781	Erwinia gerundensis	1619313	1
