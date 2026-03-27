@@ -1,9 +1,15 @@
 [project]
 name = "miripvir25"
 version = "0.1.0"
-description = "Add your description here"
+description = "MIRIPVIR25, MIRIPVIR25 explores virus–bacteria interactions in plant-associated metatranscriptomes. To our knowledge, this is a pioneering effort in the field of environmental microbiology. The repository contains data and analysis notebooks."
 readme = "README.md"
 requires-python = ">=3.12"
+authors = [
+  {name = "Bruno Cuevas Zuviria", email = "bruno.czuviria@upm.es"},
+]
+maintainers = [
+  {name = "Bruno Cuevas Zuviria", email = "bruno.czuviria@upm.es"},
+]
 dependencies = [
     "pandas>=2.3.3",
     "numpy>=2.3.4",
@@ -32,6 +38,8 @@ dependencies = [
     "mkdocstrings-python",
     "katex>=0.0.4",
     "markdown-katex>=202406.1035",
+    "ploomber>=0.23.3",
+    "ir>=0.0.6",
 ]
 
 [build-system]

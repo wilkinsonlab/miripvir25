@@ -16,7 +16,6 @@ MIRIPVIR25 explores virus–bacteria interactions in plant-associated metatransc
 - [Repository structure](#repository-structure) 📁
 - [Running analyses & docs](#running-analyses--docs) 📊
 - [Tests & quality checks](#tests--quality-checks) ✅
-- [Contributing](#contributing) 🤝
 - [License & contact](#license--contact) 📜
 
 ---
@@ -118,6 +117,6 @@ uv run python -m unittest discover -v
 
 ## License & contact
 
-See the `LICENSE` file in the repository for license details (contact maintainers if missing). For questions, open an issue or contact the maintainers listed in `pyproject.toml`.
+See the `LICENCE.md` file in the repository for license details. For questions, open an issue or contact the maintainers listed in `pyproject.toml`.
 
 ---
