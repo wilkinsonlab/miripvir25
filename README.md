@@ -120,3 +120,9 @@ uv run python -m unittest discover -v
 See the `LICENCE.md` file in the repository for license details. For questions, open an issue or contact the maintainers listed in `pyproject.toml`.
 
 ---
+
+## FUNDING
+
+PID2021-124671OB-I00. MULTIPLE INFECTIONS IN PLANT VIRUS RISK (MULVIRISK) 01/09/2023- 31/08/2025 (+ 6 months extension). Ministerio de Ciencia, Innovación/Agencia Estatal de Investigación (MCIN/AEI). PI: Fernando Garcia Arenal, Co-PI: Mark D Wilkinson
+
+<img src='https://www.cbgp.upm.es/images/mark/micin-aei.png'/>
