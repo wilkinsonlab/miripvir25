@@ -123,12 +123,12 @@ See the `LICENCE.md` file in the repository for license details. For questions, 
 
 ## FUNDING
 
-PID2021-124671OB-I00. MULTIPLE INFECTIONS IN PLANT VIRUS RISK (MULVIRISK) 01/09/2023- 31/08/2025 (+ 6 months extension). Ministerio de Ciencia, Innovación/Agencia Estatal de Investigación (MCIN/AEI). PI: Fernando Garcia Arenal, Co-PI: Mark D Wilkinson
+PID2021-124671OB-I00. MULTIPLE INFECTIONS IN PLANT VIRUS RISK (MULVIRISK) 01/09/2023- 31/08/2025 (+ 6 months extension). Ministerio de Ciencia, Innovación/Agencia Estatal de Investigación (MCIU/AEI). PI: Fernando Garcia Arenal, Co-PI: Mark D Wilkinson
 
-![MICIN/AEI](https://www.aei.gob.es/sites/default/files/inline-images/miciu-aei.png)
+![MICIU/AEI](miciu.png)
 
 <p align="center">
   <a href="https://www.aei.gob.es/">
-    <img src="https://www.aei.gob.es/sites/default/files/inline-images/miciu-aei.png" alt="MICIN/AEI logo" width="300"/>
+    <img src="./miciu.png" alt="MICIN/AEI logo" width="300"/>
   </a>
 </p>
